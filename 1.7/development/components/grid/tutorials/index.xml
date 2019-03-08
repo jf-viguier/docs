@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on PrestaShop Developer Documentation</title>
+    <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/</link>
+    <description>Recent content in Tutorials on PrestaShop Developer Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Feb 2019 18:54:04 +0100</lastBuildDate>
+    
+	<atom:link href="https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to work with Bulk Actions?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-bulk-actions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-bulk-actions/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to work with Grid Actions?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-grid-actions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-grid-actions/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to work with the Search Form?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-search-form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-search-form/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to extend a Grid with Javascript extensions?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/extend-grid-with-javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/extend-grid-with-javascript/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to modify an existing Grid in a module?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/modify-grid-in-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/modify-grid-in-module/</guid>
+      <description>How to modify an existing Grid in a module? If you need to modify an existing Grid, like inverting two columns for instance, this is really easy to do it in a module thanks to the available hooks.
+Business use case In this tutorial, we will try to improve the user experience of the Customers listing Grid (this page will be available in 1.7.6).
+Thinking about it, we could improve the current grid to highlight business-driven information:</description>
+    </item>
+    
+    <item>
+      <title>How to customize the Grid templates?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/customize-templates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/customize-templates/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to create a custom Bulk Action?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-bulk-action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-bulk-action/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to create a custom Grid Action?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-grid-action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-grid-action/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+    <item>
+      <title>How to create a custom Column Type?</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-column-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-column-type/</guid>
+      <description> Do you know how to do it? Please feel free to contribute to the docs!
+ </description>
+    </item>
+    
+  </channel>
+</rss>

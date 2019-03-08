@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/</loc>
+    <lastmod>2018-12-07T14:25:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/configuration/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/database/dbquery/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/guidelines/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/scale/benchmark/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-bulk-actions/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/ref/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/introduction/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/webservice/tutorials/prestashop-webservice-lib/</loc>
+    <lastmod>2019-02-27T14:23:52+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/why/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/tabs/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/webservice/tutorials/change_product_image/</loc>
+    <lastmod>2019-02-27T14:23:52+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/how/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/contribute/contribute_using_docker/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/</loc>
+    <lastmod>2018-12-07T14:25:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/module-file-structure/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/front-controllers/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/scale/benchmark/front-office/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/hooks/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/contribute/contribute-reporting-issues/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-grid-actions/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/hooks/list-of-hooks/</loc>
+    <lastmod>2019-01-17T09:59:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/database/objectmodel/</loc>
+    <lastmod>2018-12-11T17:53:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/faceted-search/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/</loc>
+    <lastmod>2019-01-18T14:15:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/import/</loc>
+    <lastmod>2019-01-31T23:48:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/position-updater/</loc>
+    <lastmod>2019-02-05T17:05:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/webservice/</loc>
+    <lastmod>2019-02-27T14:23:52+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/scale/benchmark/back-office/</loc>
+    <lastmod>2019-02-27T14:59:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/database/structure/</loc>
+    <lastmod>2019-02-27T17:44:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/work-with-search-form/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/testing/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/hooks/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/hooks/use-hooks-on-modern-pages/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/widgets/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/adding-configuration-page/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/forms/admin-forms/</loc>
+    <lastmod>2019-02-12T18:12:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/forms/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/extend-grid-with-javascript/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/templating/admin-views/</loc>
+    <lastmod>2018-11-29T15:46:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/javascript-events/</loc>
+    <lastmod>2018-12-11T11:34:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/kpi-blocks/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/templating/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/displaying-content-in-front-office/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/modify-grid-in-module/</loc>
+    <lastmod>2019-02-19T16:03:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/introduction/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/overrides/</loc>
+    <lastmod>2019-01-21T17:28:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/</loc>
+    <lastmod>2018-12-07T14:25:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/enabling-auto-update/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/customize-templates/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/commands/</loc>
+    <lastmod>2019-01-13T21:52:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/contribute/</loc>
+    <lastmod>2018-12-07T14:25:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-bulk-action/</loc>
+    <lastmod>2019-01-17T18:48:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/module-translation/</loc>
+    <lastmod>2018-12-28T17:39:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-grid-action/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/scale/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-custom-column-type/</loc>
+    <lastmod>2019-01-17T18:44:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/webservice/tutorials/</loc>
+    <lastmod>2019-02-27T14:23:52+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/badge/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/coding-standards/</loc>
+    <lastmod>2019-03-08T17:27:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/contribute/contribution-guidelines/</loc>
+    <lastmod>2019-01-29T18:26:29+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/data/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/datetime/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/</loc>
+    <lastmod>2018-12-31T12:46:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/backup/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/how/edit-on-github/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/testing/how-to-launch-tests/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/image/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/link/</loc>
+    <lastmod>2019-02-05T17:03:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/setting-up-your-local-environment/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/</loc>
+    <lastmod>2019-02-19T16:19:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/templates-layouts/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/templating-with-twig/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/distribution/testing/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/toggle/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/</loc>
+    <lastmod>2018-12-28T19:45:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/translation-domains/</loc>
+    <lastmod>2018-12-28T19:45:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/understanding-src-folder/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/actions-reference/</loc>
+    <lastmod>2019-01-18T17:56:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/bulk-actions-reference/</loc>
+    <lastmod>2019-01-18T17:56:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/naming-conventions/</loc>
+    <lastmod>2019-02-27T14:56:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/installation/configuration/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/installation/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/action/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/bulk-action/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/concepts/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/head/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/testing/how-to-create-your-own-tests/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/how/edit-on-your-computer/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/</loc>
+    <lastmod>2019-01-22T10:17:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/migration/</loc>
+    <lastmod>2019-02-26T14:57:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/</loc>
+    <lastmod>2019-02-26T14:16:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/position/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/</loc>
+    <lastmod>2019-02-27T15:25:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/tools-for-theme-designers/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/controller-routing/</loc>
+    <lastmod>2019-02-27T16:58:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/database/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/upgrade/</loc>
+    <lastmod>2019-02-26T14:51:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/legacy/</loc>
+    <lastmod>2019-03-04T15:46:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/notifications/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/payment/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/starter-theme/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/how/writing-markdown/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/hooks/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/listing/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/theme-organization/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/grid-crud-page/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/</loc>
+    <lastmod>2018-12-07T16:24:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/testing/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/theme-yml/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/</loc>
+    <lastmod>2018-12-28T17:39:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/clean-up/</loc>
+    <lastmod>2019-01-22T10:17:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/core_updates/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/employee-name-with-avatar/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/register-new-hook/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/compile-assets/</loc>
+    <lastmod>2018-12-07T11:19:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/mail/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/sell/</loc>
+    <lastmod>2018-12-07T14:24:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/severity-level/</loc>
+    <lastmod>2019-02-04T18:54:04+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/testing/</loc>
+    <lastmod>2019-02-05T19:23:59+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/</loc>
+    <lastmod>2018-12-07T13:57:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/asset-management/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/callout/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/core_updates/1.7.5/</loc>
+    <lastmod>2018-12-07T12:14:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/distribution/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/distribution/exporting/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/funcdef/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/creation/good-practices/</loc>
+    <lastmod>2018-12-28T14:14:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/architecture/legacy/legacy-controllers/</loc>
+    <lastmod>2019-03-04T15:46:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/migration-from-16/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/native-module-translation/</loc>
+    <lastmod>2018-12-28T17:39:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/notice/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/scale/optimizations/</loc>
+    <lastmod>2018-12-03T18:03:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/overriding-modules/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/template-inheritance/parent-child-feature/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/rtl/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/rtl/</loc>
+    <lastmod>2018-12-28T17:39:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/smarty-helpers/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/modules/sell/technical-validation/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/template-inheritance/</loc>
+    <lastmod>2019-01-29T11:57:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/reference/theme-translation/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/documentation/shortcodes/minver/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/asset-management/webpack/</loc>
+    <lastmod>2018-11-22T17:55:05+01:00</lastmod>
+  </url>
+  
+</urlset>
