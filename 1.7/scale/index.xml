@@ -1,25 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scale on PrestaShop Developer Documentation</title>
     <link>https://devdocs.prestashop.com/1.7/scale/</link>
     <description>Recent content in Scale on PrestaShop Developer Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 Nov 2018 17:55:05 +0100</lastBuildDate>
-    
-	<atom:link href="https://devdocs.prestashop.com/1.7/scale/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://devdocs.prestashop.com/1.7/scale/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimize your PrestaShop</title>
       <link>https://devdocs.prestashop.com/1.7/scale/optimizations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/scale/optimizations/</guid>
-      <description>How to Optimize the performance of your PrestaShop In order to properly benchmark your shop, you need to check the settings of PHP, Apache and MySQL.
-1) PHP Settings Try to use PHP &amp;gt;=7, it will speed up a lot your shop!
-If you&amp;rsquo;re using PHP-FPM (which should be the case in most of &amp;ldquo;modern&amp;rdquo; installations), you have to check the pool configuration. It&amp;rsquo;s usually stored in the file /etc/php/7.</description>
+      <description>Optimize your PrestaShop performance Before making any change on your PrestaShop instance, it is highly recommended to perform some benchmarks.
+The idea behind this is to know what your baseline performance is, so that you can make sure that your changes are increasing your shop&amp;rsquo;s performance and not the other way around.
+If you&amp;rsquo;ve done no benchmark beforehand, there is no way to ensure you did not decrease your performances in the end.</description>
     </item>
     
   </channel>

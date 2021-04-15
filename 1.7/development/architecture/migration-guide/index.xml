@@ -1,15 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>How to migrate Back Office pages to Symfony 3 on PrestaShop Developer Documentation</title>
+    <title>How to migrate Back Office pages to Symfony on PrestaShop Developer Documentation</title>
     <link>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/</link>
-    <description>Recent content in How to migrate Back Office pages to Symfony 3 on PrestaShop Developer Documentation</description>
+    <description>Recent content in How to migrate Back Office pages to Symfony on PrestaShop Developer Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jan 2019 10:17:04 +0100</lastBuildDate>
-    
-	<atom:link href="https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>en-us</language><atom:link href="https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migration project and strategy</title>
+      <link>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/strategy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/strategy/</guid>
+      <description>This is a summary of the current Migration Strategy. It provides an overview of our current vision, in the end of this year 2020, of the Symfony Migration project.
+Different kind of pages Back-Office pages can be classified in four categories:
+ Configuration / Settings Form pages  These pages allow the user to modify configuration settings in PrestaShop.
+Listing pages  These pages allow the user to browse PrestaShop content using listings.</description>
+    </item>
     
     <item>
       <title>Templating with Twig</title>
@@ -19,20 +26,8 @@
       <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/templating-with-twig/</guid>
       <description>Templating with Twig This is mostly the easy part. Legacy pages use Smarty while modern pages use Twig. These templating engines are actually similar in many ways.
 For instance, this is a legacy template:
-&amp;lt;span class=&amp;quot;employee_avatar_small&amp;quot;&amp;gt; &amp;lt;img class=&amp;quot;img&amp;quot; alt=&amp;quot;&amp;quot; src=&amp;quot;{$employee_image}&amp;quot; /&amp;gt; &amp;lt;/span&amp;gt; {$employee_name}  All of the legacy templates are located in the admin-dev/themes/default/template/controller folder
- &amp;hellip; and here is a possible migration of it to Twig:
-&amp;lt;span class=&amp;quot;employee_avatar_small&amp;quot;&amp;gt; &amp;lt;img class=&amp;quot;img&amp;quot; alt=&amp;quot;{{ employee.</description>
-    </item>
-    
-    <item>
-      <title>Forms</title>
-      <link>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/</guid>
-      <description>Forms Legacy forms Forms are the biggest part of the migration. Before, we had form helpers that took care of generating, validating and handling everything. In Symfony, every step (creation, validation and request handling) needs to be specified by the developer.
-For instance, this is code that you can find in a Legacy Controller:
-$this-&amp;gt;fields_options = array( &#39;general&#39; =&amp;gt; array( &#39;title&#39; =&amp;gt; $this-&amp;gt;trans(&#39;Logs by email&#39;, array(), &#39;Admin.Advparameters.Feature&#39;), &#39;icon&#39; =&amp;gt; &#39;icon-envelope&#39;, &#39;fields&#39; =&amp;gt; array( &#39;PS_LOGS_BY_EMAIL&#39; =&amp;gt; array( &#39;title&#39; =&amp;gt; $this-&amp;gt;trans(&#39;Minimum severity level&#39;, array(), &#39;Admin.</description>
+&amp;lt;span class=&amp;#34;employee_avatar_small&amp;#34;&amp;gt; &amp;lt;img class=&amp;#34;img&amp;#34; alt=&amp;#34;&amp;#34; src=&amp;#34;{$employee_image}&amp;#34; /&amp;gt; &amp;lt;/span&amp;gt; {$employee_name}  All of the legacy templates are located in the admin-dev/themes/default/template/controller folder &amp;hellip; and here is a possible migration of it to Twig:
+&amp;lt;span class=&amp;#34;employee_avatar_small&amp;#34;&amp;gt; &amp;lt;img class=&amp;#34;img&amp;#34; alt=&amp;#34;{{ employee.</description>
     </item>
     
     <item>
@@ -41,9 +36,8 @@ $this-&amp;gt;fields_options = array( &#39;general&#39; =&amp;gt; array( &#39;ti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/controller-routing/</guid>
-      <description>Controller and Routing Modern/Symfony Controllers Read the Symfony documentation on Controllers and Routing.
- Every migrated page needs one or more Controllers: if you consider that a legacy Controller needs to be split into multiple controllers (for example: different URLs), it&amp;rsquo;s the right time to do it.
-New controllers should be placed in the src/PrestaShopBundle/Controller/Admin folder. Starting on 1.7.3, controllers are being progressively organized in sub-folders following the Back Office menu.</description>
+      <description>Controller and Routing Modern/Symfony Controllers Read the Symfony documentation on Controllers and Routing. Every migrated page needs one or more Controllers: if you consider that a legacy Controller needs to be split into multiple controllers (for example: different URLs), it&amp;rsquo;s the right time to do it.
+New controllers should be placed in the src/PrestaShopBundle/Controller/Admin folder. Starting on 1.7.3, controllers are being progressively organized in sub-folders following the Back Office menu. For instance, if you are migrating a page located into &amp;ldquo;Advanced Parameters&amp;rdquo; section, put it into src/PrestaShop/Controller/Admin/Configure/AdvancedParameters.</description>
     </item>
     
     <item>
@@ -73,7 +67,7 @@ Access to a lot of data, ordered by column: this data can be simple (text) or mo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/clean-up/</guid>
-      <description> Cleaning up Once everything is migrated, refactored, extracted to specific classes and working like a charm, it&amp;rsquo;s time to remove the old, migrated parts:
+      <description>Cleaning up Once everything is migrated, refactored, extracted to specific classes and working like a charm, it&amp;rsquo;s time to remove the old, migrated parts:
  Delete the old controller. Delete the old templates (delete the admin-dev/themes/default/template/controller/{name} folder. Delete the related &amp;ldquo;legacy tests&amp;rdquo;.  </description>
     </item>
     
