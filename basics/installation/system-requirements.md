@@ -12,7 +12,7 @@ PrestaShop needs the following server configuration in order to run:
 | Requirement | Configuration 
 | ---------------- | ------------------
 | **Web server** | Apache Web Server 2.4 or any later version. (Although compatible, Apache Web Server 2.2 is not recommended since it [reached its EOL in 2018](https://httpd.apache.org/)).
-| **PHP** | **We recommend PHP 8.1**. See the compatibility chart below for more details. (Although compatible, PHP 7.2.5 to 8.0 are not recommended since they reached their [end of support](https://www.php.net/supported-versions.php).)
+| **PHP** | **We recommend PHP 8.3**. See the compatibility chart below for more details.
 | **MySQL** | 5.6 minimum, **a recent version is recommended**.
 | **Server RAM** | **The more the merrier**. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
 
@@ -48,21 +48,17 @@ You'll get a web page detailing requirements and recommendations, and how your s
     </tr>
     <tr class="h-version-titles">
       <th>PrestaShop Version</th>
-      <th>&le;&nbsp;7.1</th>
-      <th>7.2</th>
-      <th>7.3</th>
-      <th>7.4</th>
-      <th>8.0</th>
+      <th>&le;&nbsp;8.0</th>
       <th>8.1</th>
-      <th>&ge;&nbsp;8.2</th>
+      <th>8.2</th>
+      <th>8.3</th>
+      <th>&ge;&nbsp;8.4</th>
     </tr>
   </thead>
 <tbody>
   <tr>
-    <td>8.0~8.1</td>
+    <td>9.0</td>
     <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
