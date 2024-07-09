@@ -49,7 +49,7 @@ Add new hooks at the bottom of the list, as hooks are registered sequentially.
 
 The previous step only adds the hook to _new_ shops. We also need to register the hook to shops that upgrade from a previous version.
 
-The last step is to insert the new hooks in the `ps_hooks` table using the upgrade system. Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in the `upgrade/sql` folder from the [autoupgrade](https://github.com/PrestaShop/autoupgrade) module.
+The last step is to insert the new hooks in the `ps_hooks` table using the upgrade system. Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in the `upgrade/sql` folder from the [Update assistant](https://github.com/PrestaShop/autoupgrade) module.
 
 {{% notice tip %}}
 This process is explained here: [Structure and content upgrades]({{< ref "/9/development/database/structure.md#structure-and-content-upgrades" >}})
