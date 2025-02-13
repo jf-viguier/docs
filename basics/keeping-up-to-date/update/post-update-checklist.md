@@ -2,7 +2,7 @@
 title: Post-update checklist
 weight: 50
 aliases:
-  - /9/development/upgrade-module/post-update-checklist
+  - /9/development/update/post-update-checklist
 ---
 
 # Post-update checklist
@@ -24,5 +24,5 @@ The following steps will be executed during the upgrade:
 - If something’s wrong, you can restore a backup with this module. Your backup is available at {admin}/autoupgrade/backup and can be restored either manually or via the [command line interface][1]
 - If you can't access your back office, try enabling the debug mode manually in config/defines.inc.php by setting _PS_MODE_DEV_ to true ([see the dedicated documentation][2])
 
-[1]: {{< relref "/9/basics/keeping-up-to-date/upgrade-module/upgrade-cli" >}}
+[1]: {{< relref "/9/basics/keeping-up-to-date/update/upgrade-cli" >}}
 [2]: {{< relref "/9/development/configuration/configuring-prestashop#enabling-debug-mode" >}}
