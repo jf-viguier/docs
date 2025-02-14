@@ -40,5 +40,3 @@ In order to find out what exactly went wrong, you need to check the upgrade proc
 **A:** In PrestaShop, `PS_VERSION_DB` is a constant that holds the current version number of your PrestaShop database schema. The main purpose of `PS_VERSION_DB` is to keep track of the database schema's version history. When you upgrade a shop, the database schema is modified to match the structure of the new version (e.g. add or remove tables, columns, or relationships). 
 
 Before upgrading PrestaShop, the upgrade module relies on this constant to ensure that the current version matches the database schema. If the values don't match, it would be a sign of potential issues with the database structure or data which could lead to unforeseen consequences during the upgrade process.
-
-To resolve this issue, run the database upgrade step as explained in [the upgrade page]({{< ref "/9/basics/keeping-up-to-date/upgrade#database-upgrade" >}}).

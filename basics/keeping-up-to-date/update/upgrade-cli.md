@@ -2,7 +2,7 @@
 title: Upgrade CLI
 weight: 40
 aliases:
-  - /9/development/upgrade-module/upgrade-cli
+  - /9/development/update/upgrade-cli
 ---
 
 # Module CLI
@@ -23,8 +23,8 @@ The following parameters are mandatory:
 
 You can also use these parameters:
 
-* **--channel**: Specify the [channel to use]({{< ref "/9/basics/keeping-up-to-date/upgrade-module/channels.md" >}})
-* **--action**: Specify the [step you want to start from]({{< ref "/9/basics/keeping-up-to-date/upgrade-module/upgrade-process-steps.md" >}}) (Default: `UpgradeNow`)
+* **--channel**: Specify the channel to use
+* **--action**: Specify the [step you want to start from]({{< ref "/9/basics/keeping-up-to-date/update/upgrade-process-steps.md" >}}) (Default: `UpgradeNow`)
 
 If you use default `action` parameter, it will run the full upgrade process.
 
