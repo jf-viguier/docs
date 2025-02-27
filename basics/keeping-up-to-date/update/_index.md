@@ -12,12 +12,10 @@ aliases:
 This chapter describes several ways to complete an update of PrestaShop.
 
 ## Update Assistant module - Update from the Back-Office interface
-<!--TODO create link 'here' when Update from the Back-Office is ready-->
-You can use provided `Update Assistant` module to update your store to the newest version using web interface. You can read more about the module and how to use it here.
+You can use provided `Update Assistant` module to update your store to the newest version using web interface. You can read more about the module and how to use it [here][1].
 
 ## Update Assistant module - Update from the Command-Line (CLI)
-<!--TODO create link 'here' when Update from the Command-Line is ready-->
-`Update Assistant` module is fully accessible through `cli`. You can read all the details here.
+`Update Assistant` module is fully accessible through `cli`. You can read all the details [here][2].
 
 ## Support service
 
@@ -32,3 +30,6 @@ More information about support: <a href="https://www.prestashop-project.org/supp
 ## Read more
 
 {{% children /%}}
+
+[1]: {{< relref "/9/basics/keeping-up-to-date/update/update-from-the-back-office" >}}
+[2]: {{< relref "/9/basics/keeping-up-to-date/update/update-from-the-cli" >}}
