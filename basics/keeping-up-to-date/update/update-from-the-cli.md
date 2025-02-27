@@ -3,6 +3,7 @@ title: Update from the CLI
 weight: 40
 aliases:
   - /9/development/update/upgrade-cli
+  - /9/basics/keeping-up-to-date/upgrade/upgrade-cli
 ---
 
 # Update from the Command-Line
