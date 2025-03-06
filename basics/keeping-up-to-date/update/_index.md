@@ -5,6 +5,8 @@ description: Everything you need to know to update your PrestaShop to the latest
 weight: 80
 aliases:
   - /9/basics/keeping_up-to-date/update
+  - /9/basics/keeping-up-to-date/upgrade
+  - /9/basics/keeping-up-to-date/upgrade-module
 ---
 
 # How to update PrestaShop
