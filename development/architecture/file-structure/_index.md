@@ -244,7 +244,7 @@ Contains various files needed by PrestaShop for its internal operation, includin
 
 ### /vendor
 
-Contains various 3rd-party libraries required by PrestaShop through Composer, such as Symfony, Doctrine, Guzzle, etc.
+Contains various 3rd-party libraries required by PrestaShop through Composer, such as Symfony, Doctrine, API Platform core, etc.
 
 ### /webservice
 
