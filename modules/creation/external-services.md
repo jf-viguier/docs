@@ -71,11 +71,32 @@ This can be done by generating your own token and checking it everytime the cont
 
 HTTP requests can be triggered from a shop to an external service.
 
-Several methods allows requests to be sent (in order of preference):
+Several methods allow requests to be sent (in order of preference):
 
-* [Guzzle](https://github.com/guzzle/guzzle). The version 7.4 is included from PrestaShop {{< minver v="8.0" >}} (version 5 in {{< minver v="1.7.0" >}}), but can be included in your module as well for older PS versions.
-  * Loading in memory another version of guzzle in the same namespace will trigger errors on the shop.
-  * Example with PS Checkout module: [Inclusion in composer.json](https://github.com/PrestaShopCorp/ps_checkout/blob/578135d8bef2d99b8056ebc0bd709e9a87d661e6/composer.json#L28) & [implementation](https://github.com/PrestaShopCorp/ps_checkout/blob/ef48da09735e6e64b42364a703b5a74d41cd24d9/classes/Api/Payment/Dispute.php)
+* [Symfony HTTP Client](https://symfony.com/doc/6.4/http_client.html)
+  * In legacy code you can create one manually `$client = HttpClient::create();`
+  * In Symfony environment (in the BO) you should rely on dependency injection as the Symfony documentation suggests
+```php
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+
+class SymfonyDocs
+{
+    public function __construct(
+        private HttpClientInterface $client,
+    ) {
+    }
+
+    public function fetchGitHubInformation(): array
+    {
+        $response = $this->client->request(
+            'GET',
+            'https://api.github.com/repos/symfony/symfony-docs'
+        );
+        
+        return $response->getContent();
+    }
+}
+```
 * [\Tools::file_get_contents(...)](https://github.com/PrestaShop/PrestaShop/blob/a07a569b45ab6afc777f25aba505997004e5f70a/classes/Tools.php#L2212-L2223)
   * Will rely on `cURL` or `fopen()`, depending on what is available on the shop.
   * Exists from PrestaShop {{< minver v="1.4" >}}
