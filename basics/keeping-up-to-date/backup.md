@@ -1,6 +1,6 @@
 ---
 title: "How to backup PrestaShop"
-menuTitle: "Shop backup"
+menuTitle: "Store backup"
 weight: 10
 ---
 
@@ -13,25 +13,25 @@ It is strongly recommended not to leave your backups at the root of your store o
 {{% /notice %}}
 
 Before starting anything, you must think first about safety.
-Any modification to a shop could break it, so you must ensure all your data has been backed up before going further. This implies saving two things: your files and your database.
+Any modification to a store could break it, so you must ensure all your data has been backed up before going further. This implies saving two things: your files and your database.
 
-This documentation can help to run an upgrade, but we can’t be held responsible for any damage caused to your shop during the process. That’s why we strongly recommend you follow this backup step.
+This documentation can help to run an update, but we can’t be held responsible for any damage caused to your store during the process. That’s why we strongly recommend you follow this backup step.
 
 ## File backup
 
-The first elements to backup are the files on the web server where you have deployed your PrestaShop. The PrestaShop folder contains the source code and your modules & themes, pictures, and all other resources needed to run your shop successfully.
+The first elements to backup are the files on the web server where you have deployed your PrestaShop. The PrestaShop folder contains the source code and your modules & themes, pictures, and all other resources needed to run your store successfully.
 
 ### Copy files
 
-To complete this step, your shop folder must be copied somewhere else. Although it can be copied to another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH, or RDP connection (depending on your server and hosting provider), copy the files to another location, then download them on your computer.
+To complete this step, your store folder must be copied somewhere else. Although it can be copied to another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH, or RDP connection (depending on your server and hosting provider), copy the files to another location, then download them on your computer.
 
-With SSH, you may use `scp` or `rsync` command to backup your shop folder from a server to another. For example, backup from a remote server to your local machine (or the one you are connected on) with `scp` ([scp man page](https://linuxcommand.org/lc3_man_pages/scp1.html)):
+With SSH, you may use `scp` or `rsync` command to backup your store folder from a server to another. For example, backup from a remote server to your local machine (or the one you are connected on) with `scp` (<a href="https://linuxcommand.org/lc3_man_pages/scp1.html" target="_blank">scp man page</a>):
 
 ```
 scp -r user@host:/var/www/prestashop_folder_path /local_path_for_backup/
 ```
 
-Or with `rsync` ([rsync man page](https://linux.die.net/man/1/rsync)):
+Or with `rsync` (<a href="https://linux.die.net/man/1/rsync" target="_blank">rsync man page</a>):
 
 ```
 rsync -avz user@host:/var/www/prestashop_folder_path /local_path_for_backup/
@@ -86,7 +86,7 @@ If you do not remember your database name or credentials, you can find them in y
 * PrestaShop 1.6: `config/settings.inc.php`
 * Since PrestaShop 1.7: `app/config/parameters.php`
 
-More details about backup & recoveries with MySQL binaries can be found on the [official documentation](https://dev.mysql.com/doc/refman/5.7/en/backup-and-recovery.html).
+More details about backup & recoveries with MySQL binaries can be found on the <a href="https://dev.mysql.com/doc/refman/5.7/en/backup-and-recovery.html" target="_blank">official documentation</a>.
 
 ### PhpMyAdmin (web interface)
 
@@ -108,7 +108,14 @@ Click on the “Go” button, wait for the dump to be generated, then download i
 
 There are a lot of ways to connect to a MySQL server. Many different softwares also provide a dump or export option as well.
 
-* MySQL Workbench: https://dev.mysql.com/doc/workbench/en/wb-migration-wizard.html
-* Navicat MySQL: https://www.navicat.com/manual/online_manual/en/navicat/win_manual/#/dump_execute_sql
-* Adminer, a very easy to use and complete MySQL client in php: https://www.adminer.org/
-* Sequel Pro (Mac): https://www.sequelpro.com/
+* <a href="https://dev.mysql.com/doc/workbench/en/wb-migration-wizard.html" target="_blank">MySQL Workbench</a>
+* <a href="https://www.navicat.com/manual/online_manual/en/navicat/win_manual/#/dump_execute_sql" target="_blank">Navicat MySQL</a>
+* <a href="https://www.adminer.org/" target="_blank">Adminer</a>, a very easy to use and complete MySQL client in php
+* <a href="https://www.sequelpro.com/" target="_blank">Sequel Pro (Mac)</a>
+
+## Automatic backup with Update Assistant module
+
+For your information, you can also automate your backup using the Update Assistant module. This module guides you through the configuration and execution of your backup before performing your update. You have two options: perform the backup directly from the [module interface in your Back-Office][1], or from the [associated Command-Line (CLI)][2].
+
+[1]: {{< relref "/9/basics/keeping-up-to-date/use-autoupgrade-module" >}}
+[2]: {{< relref "/9/basics/keeping-up-to-date/update/update-from-the-cli" >}}
