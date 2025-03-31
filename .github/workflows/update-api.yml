@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - ps_branch: develop
+          - ps_branch: 9.0.x
             doc_branch: 9.x
 
     steps:
