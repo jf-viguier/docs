@@ -10,6 +10,8 @@ on:
 jobs:
   update-api:
     name: Update API doc json
+    permissions:
+      contents: write
 
     runs-on: ubuntu-latest
 
@@ -26,7 +28,7 @@ jobs:
           php-version: 8.1
           extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv
         env:
-          GITHUB_TOKEN: ${{ secrets.JARVIS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Checkout PrestaShop
       - uses: actions/checkout@v4
@@ -46,7 +48,7 @@ jobs:
       - name: Setup Environment failure
         uses: ./.github/actions/setup-env-export-logs
         with:
-          DOCKER_PREFIX: prestashop
+          DOCKER_PREFIX: docs
           ARTIFACT_NAME: setup-symfony-console-${{ matrix.app-id }}
           ENABLE_SSL: 'true'
           INSTALL_AUTO: 'true'
@@ -58,6 +60,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/var/docs
           ref: ${{ matrix.doc_branch }}
+          token: ${{ secrets.JARVIS_API_TOKEN }}
 
       - name: Execute core command to export the JSON API doc
         run: |
@@ -68,5 +71,4 @@ jobs:
         run: |
           git config --global user.name 'Jarvis'
           git config --global user.email 'jarvis@prestashop.com'
-          git remote set-url origin https://x-access-token:${{ secrets.JARVIS_TOKEN }}@github.com/${{ github.repository }}
           git commit -am "Auto updated API doc json" && git push || echo "No changes to commit"
