@@ -5,6 +5,7 @@ chapter: true
 pre: "<b>7. </b>"
 weight: 7
 showOnHomepage: true
+icon: 'images/icons/adminapi.svg'
 ---
 
 ### Chapter 7

@@ -2,6 +2,7 @@
 title: Context of the Admin API
 menuTitle: Context
 weight: 1
+showOnHomepage: true
 ---
 
 # Context of the Admin API
