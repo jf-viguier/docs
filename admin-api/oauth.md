@@ -3,6 +3,7 @@ title: OAuth2 authentication / authorization
 menuTitle: OAuth2
 weight: 2
 useMermaid: true
+showOnHomepage: true
 ---
 
 # Oauth2

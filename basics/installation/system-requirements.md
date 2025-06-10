@@ -14,7 +14,7 @@ PrestaShop needs the following server configuration in order to run:
 | **Web server** | Apache Web Server 2.4 or any later version. (Although compatible, Apache Web Server 2.2 is not recommended since it [reached its EOL in 2018](https://httpd.apache.org/)).
 | **PHP** | **We recommend PHP 8.3**. See the compatibility chart below for more details.
 | **SQL** | MySQL 5.7 minimum or MariaDB 10.2 minimum, **a recent version is recommended**.
-| **Server RAM** | **The more the merrier**. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
+| **Server RAM** | **The more the merrier**. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `512M`.
 
 PrestaShop works best in Unix-based systems such as Linux and macOS, and while Windows might work, it is not actively supported.
 
@@ -62,11 +62,11 @@ You'll get a web page detailing requirements and recommendations, and how your s
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
+    <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
       <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
 </tbody>

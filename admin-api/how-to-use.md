@@ -1,6 +1,8 @@
 ---
 title: How to use the Admin API
 menuTitle: How to use
+showOnHomepage: true
+weight: 100
 ---
 
 # How to use the Admin API
