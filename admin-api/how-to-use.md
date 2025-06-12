@@ -285,7 +285,3 @@ Thanks to the automatically generated documentation, you can easily import the A
 ## Extending API
 
 The new API in PrestaShop 9 is designed to be extensible. You can add new endpoints, scopes, and other features to the API. We plan to release extensive developer documentation for the API soon. In the meantime, you can check the [example module](https://github.com/PrestaShop/example-modules/tree/master/api_module) and the [ps_apiresources](https://github.com/PrestaShop/ps_apiresources).
-
-{{% notice %}}
-The new API in PrestaShop 9 is still under development. We encourage you to test it and provide feedback to help us improve it further.
-{{% /notice %}}
