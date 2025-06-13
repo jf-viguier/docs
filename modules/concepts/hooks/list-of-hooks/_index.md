@@ -6,6 +6,7 @@ chapter: false
 aliases:
  - /9/modules/sample-modules/example-hooks
 mostViewedPage: true
+disableToc: true
 ---
 
 # List of hooks
