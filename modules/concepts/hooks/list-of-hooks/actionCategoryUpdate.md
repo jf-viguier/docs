@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Category modification'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminProductsController.php'
-        file: controllers/admin/AdminProductsController.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Category.php'
+        file: classes/Category.php
 locations:
     - 'back office'
 type: action
