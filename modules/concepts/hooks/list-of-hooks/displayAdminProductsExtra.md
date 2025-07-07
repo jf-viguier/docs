@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Display new elements in back office product page, Extra tab'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/product.html.twig'
-        file: src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/product.html.twig
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/ExtraModulesType.php'
+        file: src/PrestaShopBundle/Form/Admin/Sell/Product/ExtraModulesType.php
 locations:
     - 'back office'
 type: display
@@ -15,17 +15,11 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: 'This hook launches modules when the back office product page is displayed'
+description: 'This form type is used to display modules in an extra tab that regroup the modules implementing the displayAdminProductsExtra hook. This is not the recommended way to integrate in the product page anymore but we keep it for backward compatibility.'
 
 ---
 
 {{% hookDescriptor %}}
-
-## Call of the Hook in the origin file
-
-```php
-{% set hooks = renderhooksarray('displayAdminProductsExtra', { 'id_product': id_product }) %}
-```
 
 ## Example implementation
 

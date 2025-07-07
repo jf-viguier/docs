@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/ProductController.php'
-        file: src/PrestaShopBundle/Controller/Admin/ProductController.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/Update/ProductDuplicator.php'
+        file: src/Adapter/Product/Update/ProductDuplicator.php
 locations:
     - 'back office'
 type: action
@@ -23,8 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters(
-                        'actionAdminDuplicateBefore',
-                        $hookEventParameters
-                    )
+$this->hookDispatcher->dispatchWithParameters(
+    'actionAdminDuplicateBefore',
+    ['id_product' => $oldProductId]
+);
 ```

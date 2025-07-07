@@ -41,6 +41,7 @@ Hook::exec(
                 'idShop' => &$idShop,
                 'bcc' => &$bcc,
                 'replyTo' => &$replyTo,
+                'replyToName' => &$replyToName,
             ],
             null,
             true
