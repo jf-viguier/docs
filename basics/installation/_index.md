@@ -163,6 +163,10 @@ PrestaShop comes in two "flavors":
 If you intend to work on PrestaShop itself, we suggest using Git to clone the source code of PrestaShop from the GitHub repository.
 {{% /notice %}}
 
+{{% notice warning %}}
+Starting with PrestaShop 9, releases versions are not build on GitHub and are not available on GitHub anymore. Read our [article](https://build.prestashop-project.org/news/2024/new-zip-distribution-channel/) on Build blog for more informations about it.
+{{% /notice %}}
+
 {{% callout %}}
 
 ##### Repository branches
