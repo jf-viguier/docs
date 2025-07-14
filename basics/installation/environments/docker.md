@@ -437,7 +437,7 @@ All our images and tags are available on [Docker Hub](https://hub.docker.com/r/p
 You can use a specific PrestaShop version by changing the image tag: 
 
 - Use latest image: `prestashop/prestashop:latest`
-- Use 1.7: `prestashop/prestashop:latest`
+- Use 1.7: `prestashop/prestashop:1.7`
 - Use 1.7.8: `prestashop/prestashop:1.7.8`
 
 ### Use a specific PHP version
