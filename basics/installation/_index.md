@@ -144,7 +144,7 @@ Finally, flush privileges:
 
 The source code of PrestaShop is hosted on the [Official PrestaShop GitHub Repository](https://github.com/PrestaShop/PrestaShop/).
 
-You can find all the released versions of PrestaShop here: [PrestaShop releases](https://prestashop.com/versions/).
+You can find all the released versions of PrestaShop here: [PrestaShop releases](https://github.com/PrestaShop/PrestaShop/releases/).
 
 Nightly releases of PrestaShop are also generated daily. Their details can be found on a [public Google Cloud storage](https://console.cloud.google.com/storage/browser/prestashop-core-nightly).
 
