@@ -272,7 +272,7 @@ use PrestaShopBundle\ApiPlatform\Metadata\CQRSDelete;
             uriTemplate: '/api-client/{apiClientId}',
             requirements: ['apiClientId' => '\d+'],
             output: false,
-            CQRSQuery: DeleteApiClientCommand::class,
+            CQRSCommand: DeleteApiClientCommand::class,
             scopes: ['api_client_write']
         ),
     ],
