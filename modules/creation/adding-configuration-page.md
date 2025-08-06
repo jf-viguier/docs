@@ -105,7 +105,7 @@ public function displayForm()
     $helper->table = $this->table;
     $helper->name_controller = $this->name;
     $helper->token = Tools::getAdminTokenLite('AdminModules');
-    $helper->currentIndex = AdminController::$currentIndex . '&' . http_build_query(['configure' => $this->name]);
+    $helper->currentIndex = $this->context->link->getAdminLink('AdminModules', true) . '&' . http_build_query(['configure' => $this->name]);
     $helper->submit_action = 'submit' . $this->name;
 
     // Default language
