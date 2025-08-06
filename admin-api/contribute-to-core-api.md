@@ -43,7 +43,8 @@ ps_apiresources/
 │       └── Resources/
 │           └── Attribute/                      # The namespace contains the larger domain Attribute (that combines AttributeGroup and AttributeValue)
 │               ├── AttributeGroup.php          # Resource for single operations
-│               └── AttributeGroupList.php      # Resource for listing
+│               ├── AttributeGroupList.php      # Resource for listing
+│               └── BulkAttributeGroups.php     # Resource for bulk operation
 ├── tests/
 │   └── Integration/
 │       └── ApiPlatform/
@@ -63,7 +64,7 @@ The new admin API is based on APIPlatform, we use some API Resources which are c
 
 #### Create the API Resource object that defines our expected format
 
-Create the file `src/ApiPlatform/Resources/AttributeGroup/AttributeGroup.php`, here is the simple DTO with the naming we are expecting:
+Create the file `src/ApiPlatform/Resources/Attribute/AttributeGroup.php`, here is the simple DTO with the naming we are expecting:
 
 ```php
 <?php
@@ -79,8 +80,6 @@ class AttributeGroup
     public array $names;
 
     public array $publicNames;
-
-    public bool $isColorGroup;
 
     public string $groupType;
 
@@ -135,8 +134,6 @@ class AttributeGroup
     public array $names;
 
     public array $publicNames;
-
-    public bool $isColorGroup;
 
     public string $groupType;
 
@@ -233,7 +230,7 @@ That's why we introduced a customer PHP attribute `PrestaShopBundle\ApiPlatform\
 
 ```php
 ...
-use PrestaShopBundle\ApiPlatform\Metadata\LocalizedValue
+use PrestaShopBundle\ApiPlatform\Metadata\LocalizedValue;
 ...
 
 #[ApiResource(
@@ -253,7 +250,7 @@ class AttributeGroup
 }
 ```
 
-You nw have two endpoints that allow you to create and fetch an AttributeGroup, and the format looks like this:
+You now have two endpoints that allow you to create and fetch an AttributeGroup, and the format looks like this:
 
 ```json
 {
@@ -318,7 +315,7 @@ class AttributeGroup
 
 ### 3. Bulk deletion
 
-For bulk action we create a new dedicated resource with only one array field `$attributeGroupIds`
+For bulk action we create a new dedicated resource with only one array field `$attributeGroupIds`, create the file `src/ApiPlatform/Resources/Attribute/BulkAttributeGroups.php`:
 
 ```php
 <?php
@@ -359,7 +356,6 @@ class BulkAttributeGroups
     #[Assert\NotBlank]
     public array $attributeGroupIds;
 }
-
 ```
 
 ### 4. Errors and validation
@@ -407,6 +403,9 @@ You can also use validation groups, which is very convenient when your constrain
 And here is an example with our `AttributeGroup` example that now includes validation:
 
 ```php
+...
+use PrestaShop\PrestaShop\Core\ConstraintValidator\Constraints\DefaultLanguage;
+use PrestaShop\PrestaShop\Core\ConstraintValidator\Constraints\TypedRegex;
 ...
 use Symfony\Component\Validator\Constraints as Assert;
 ...
@@ -472,6 +471,7 @@ class AttributeGroup
     public array $shopIds;
 
     public int $position;
+    ...
 }
 ```
 
@@ -482,14 +482,25 @@ When you need to know which constraint apply on your entity you can search for i
 ### 5. Create the List API Resource (AttributeGroupList.php)
 
 For the listing API we use the Grid component that is used on Symfony migrated pages, so any migrated page should already have the appropriate Grid data factory.
+
+#### How to find the Grid Data factory service name
+
 To find the service name you need to look into the Symfony controller related to the entity you are targeting:
 1. Find the `AttributeGroupController` and check which [Grid factory service it relies on](https://github.com/PrestaShop/PrestaShop/blob/c5102424bc44c8fabbdfa1477bbb275fd75d4efe/src/PrestaShopBundle/Controller/Admin/Sell/Catalog/AttributeGroupController.php#L66)
 2. In our case it is `prestashop.core.grid.factory.attribute_group` now we need to search for its service definition
 3. In this service definition you can find the associated [Grid Data factory service](https://github.com/PrestaShop/PrestaShop/blob/f3d3a87a16e8bb36df151727f2f135ae2fd8dfb1/src/PrestaShopBundle/Resources/config/services/core/grid/grid_factory.yml#L327)
-4. In our case it is `prestashop.core.grid.data.factory.attribute_group_decorator` that we'll need to configure our endpoint
+4. In our case `prestashop.core.grid.data.factory.attribute_group_decorator` is the **Grid data factory service name that we'll need** to configure our endpoint
 5. You can check that [this service](https://github.com/PrestaShop/PrestaShop/blob/f3d3a87a16e8bb36df151727f2f135ae2fd8dfb1/src/PrestaShopBundle/Resources/config/services/core/grid/grid_data_factory.yml#L416) is based on the [AttributeGroupGridDataFactory](https://github.com/PrestaShop/PrestaShop/blob/a5d084be8476afc856e9306db7a9b4e94836a252/src/Core/Grid/Data/Factory/AttributeGroupGridDataFactory.php#L36) that implements the `GridDataFactoryInterface`
 
-Now you can create the file `src/ApiPlatform/Resources/AttributeGroup/AttributeGroupList.php`, we usually use another API resource class for the listing because the returned data is usually smaller than on the single point:
+#### Extra information on internal services
+
+- From the factory [service definition](https://github.com/PrestaShop/PrestaShop/blob/653e2a8a86f6df52e33f7b126f777d7400974872/src/PrestaShopBundle/Resources/config/services/core/grid/grid_factory.yml#L318) you can also deduce [Grid definition service](https://github.com/PrestaShop/PrestaShop/blob/29af08841c8bb66bc552b1339c8d594c1d9b7ef8/src/Core/Grid/Definition/Factory/AttributeGroupGridDefinitionFactory.php#L50) which can help you understand which [filters](https://github.com/PrestaShop/PrestaShop/blob/29af08841c8bb66bc552b1339c8d594c1d9b7ef8/src/Core/Grid/Definition/Factory/AttributeGroupGridDefinitionFactory.php#L181) are usable on this endpoint.
+- In this special case, for AttributeGroup, the factory decorates another one [`prestashop.core.grid.data.factory.attribute_group`](https://github.com/PrestaShop/PrestaShop/blob/653e2a8a86f6df52e33f7b126f777d7400974872/src/PrestaShopBundle/Resources/config/services/core/grid/grid_data_factory.yml#L400), if you check its definition you will see that is uses the `prestashop.core.grid.query_builder.attribute_group`
+- From there you can find the `prestashop.core.grid.query_builder.attribute_group` service which is the [Query builder](https://github.com/PrestaShop/PrestaShop/blob/6b28c32d9355a2e99f42f50ee302a95ca2cb32ea/src/Core/Grid/Query/AttributeGroupQueryBuilder.php#L37) that builds the SQL query
+
+#### Create the AttributeGroupList API resource
+
+Now you can create the file `src/ApiPlatform/Resources/Attribute/AttributeGroupList.php`, we usually use another API resource class for the listing because the returned data is usually smaller than on the single point:
 - to list the AttributeGroups we use the `prestashop.core.grid.data.factory.attribute_group_decorator` service mapped with a `PaginatedList` operation
 
 ```php
@@ -591,10 +602,11 @@ Keep in mind that the default fixtures are inserted in the database (like for ou
 To run the test the module needs a PrestaShop core base to be executed into, we provide some tools to install a shop in a `/tmp` folder
 
 ```bash
+composer install
 # Setup your tests in local, it will:
 # - clone the repository
 # - build the assets
-# - install a shop with fixtures data (a working DB is needed)
+# - install a shop with fixtures data (a working DB is needed), you can edit your DB access in the parameters.php.dist file (or in parameters.php once you have installed your local env)
 composer setup-local-tests
 ```
 
