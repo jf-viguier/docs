@@ -72,6 +72,8 @@ declare(strict_types=1);
 
 namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\AttributeGroup;
 
+use ApiPlatform\Metadata\ApiProperty;
+
 class AttributeGroup
 {
     #[ApiProperty(identifier: true)]
