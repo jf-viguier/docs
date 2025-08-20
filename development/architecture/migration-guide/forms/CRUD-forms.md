@@ -159,7 +159,7 @@ In most cases, you can simply reuse the default implementation. All you need to 
 
 prestashop.core.form.identifiable_object.builder.contact_form_builder:
   class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Builder\FormBuilder'
-  factory: 'prestashop.core.form.builder.form_builder_factory:create'
+  factory: [ '@prestashop.core.form.builder.form_builder_factory', 'create' ]
   arguments:
     - 'PrestaShopBundle\Form\Admin\Configure\ShopParameters\Contact\ContactType'
     - '@prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider'
