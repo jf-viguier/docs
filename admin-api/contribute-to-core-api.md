@@ -612,7 +612,12 @@ composer install
 composer setup-local-tests
 ```
 
-If the DB setting is not adapted to your environment you can modify them in the `test/local-parameters/parameters.yml` file.
+If the DB setting is not adapted to your environment, you can modify them in the `tests/local-parameters/parameters.yml` and `tests/local-parameters/parameters.php` files.
+
+```bash
+# To test with your parameters
+composer setup-local-tests -- --update-local-parameters
+```
 
 By default, the branch clone is the `develop` branch, in case you want to use another one you can use additional parameters:
 
