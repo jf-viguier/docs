@@ -595,7 +595,7 @@ This API returns a paginated list which base format is consistent with all other
 To run the tests locally you can clone the module repository, and you can run the tests from its root folder
 
 {{% notice note %}}
-The following step sets-up an environment to run the tests, it needs a working database to install al the default fixtures, and of course persist the data that will be read/written by the API.
+The following step sets-up an environment to run the tests, it needs a working database to install all the default fixtures, and of course persist the data that will be read/written by the API.
 Keep in mind that the default fixtures are inserted in the database (like for our other integration tests), so you already have a few products, categories and so on inside it.
 {{% /notice %}}
 
