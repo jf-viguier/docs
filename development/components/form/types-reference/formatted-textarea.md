@@ -45,6 +45,33 @@ class CustomType
 }
 ```
 
+This field require that you use the Prestashop UI Kit for the form.
+```php
+{% form_theme demoConfigurationTextForm '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
+
+{% block content %}
+  {{ form_start(demoConfigurationTextForm) }}
+  <div class="card">
+    <h3 class="card-header">
+      <i class="material-icons">settings</i> {{ 'Text form types'|trans({}, 'Modules.DemoSymfonyForm.Admin') }}
+    </h3>
+    <div class="card-body">
+      <div class="form-wrapper">
+        {{ form_widget(demoConfigurationTextForm) }}
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary float-right" id="save-button">
+          {{ 'Save'|trans({}, 'Admin.Actions') }}
+        </button>
+      </div>
+    </div>
+  </div>
+  {{ form_end(demoConfigurationTextForm) }}
+{% endblock %}
+```
+
 ## Preview example
 
 {{< figure src="../img/formatted_textarea.png" title="FormattedTextareaType rendered in form example" >}}
