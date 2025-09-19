@@ -152,7 +152,8 @@ Nightly releases of PrestaShop are also generated daily. Their details can be fo
 
 PrestaShop comes in two "flavors":
 
-- **Development version**. The raw source code as it is on the GitHub repository, including automated test suites, build scripts and source codes for assets that are otherwise compiled (like javascript and css files).
+- **Development version**. The raw source code is available on the GitHub repository, including automated test suites, build scripts, and source code for assets that are otherwise compiled (like JavaScript and CSS files).
+- **Release package**. A zip package, tuned for production environments and with PrestaShop SA modules included, released and distributed on PrestaShop.com by PrestaShop SA
 
 {{% notice tip %}}
 **Prefer cloning the repository using git for the development version.**
