@@ -14,7 +14,7 @@ The `SwitchType` displays a switch with Yes/No values.
 | disabled   | bool | `false`  | Whether Switch should be disabled or not |
 
 ## Required Javascript components
-    
+
 None.
 
 ## Code example

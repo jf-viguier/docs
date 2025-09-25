@@ -26,14 +26,14 @@ This can be done following two steps:
 
 * Update **the JSON configuration** of the PrestaShop project
 * Update i18n.prestashop.com content
-  
+
 ### Update required JSON configuration files in the PrestaShop project
 
 In PrestaShop, processing of languages is controlled by JSON configuration:
 
 * `app/Resources/all_languages.json`
 * `app/Resources/legacy-to-standard-locales.json`
-  
+
 The first one is used for listing languages supported by PrestaShop in back office.
 
 The second one is used to match the legacy 2-letter codes used for locales to the standard IETF language tags.
@@ -53,7 +53,7 @@ The item is filled with key/values relative to the localization :
 * `language_code` : Language code
 * `locale` : ISO code (5 characters) : two-letter language code ([ISO 639-1][iso-639-1]) and the two-letter country code ([ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
 
-This is a sample : 
+This is a sample :
 ```json
   "da": {
     "name": "Dansk (Danish)",
@@ -72,7 +72,7 @@ In this file, you need to add a key/value.
 
 The key is the ISO code, based on the ISO-639-1 standard ([see an unofficial list here][iso-639-1]). The value is the locale.
 
-This is a sample : 
+This is a sample :
 ```json
   "da": "da-DK"
 ```
@@ -87,12 +87,12 @@ This content of i18n.prestashop.com is controlled by the GitHub repository [Pres
 
 The list of available languages is controlled by the file `available_languages.json` of the current version.
 
-You must submit a Pull Request in which you add a key/value: 
+You must submit a Pull Request in which you add a key/value:
 
 * The key is the locale of the language
 * The value is the name of the language which be displayed in the back office.
 
-This is a sample : 
+This is a sample :
 ```json
   "da-DK": "Danish (Denmark)"
 ```

@@ -13,7 +13,7 @@ It is used to add a field with a recommended input length counter to the form.
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
-| recommended_length | `int` | 
+| recommended_length | `int` |
 
 ## Required Javascript components
 
@@ -60,4 +60,3 @@ $builder->add('meta_description', TranslatableType::class, [
 ## Preview example
 
 {{< figure src="../img/text-with-recommended-length-type.png" title="TextWithRecommendedLengthType rendered in form" >}}
-

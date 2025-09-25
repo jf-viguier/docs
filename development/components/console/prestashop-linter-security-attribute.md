@@ -20,5 +20,4 @@ Two options are available: Listing and Finding Missing.
 This option aims to list all routes, and their related permissions.
 
 ### Finding missing
-This option aims to find routes with missing security attributes.    
-
+This option aims to find routes with missing security attributes.

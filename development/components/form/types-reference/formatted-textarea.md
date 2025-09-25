@@ -14,7 +14,7 @@ Enables TinyMCE text editor on TextareaType.
 | limit    | int  | 21844         | Limit of characters in text field. By default value equals to max size of UTF-8 content available in MySQL text column |
 
 ## Required Javascript components
- 
+
 | Component                                                             | Description                         |
 |:----------------------------------------------------------------------|:------------------------------------|
 | TinyMCEEditor | Rich text editor |

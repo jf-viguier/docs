@@ -70,7 +70,7 @@ $isSingleShopContext = $shopContext->isSingleShopContext();
 // Is "all shops" context
 $isAllShopContext = $shopContext->isAllContext();
 
-// Get a list of IDs for all shops belonging to the current context (useful is the current context is a group) 
+// Get a list of IDs for all shops belonging to the current context (useful is the current context is a group)
 $shopList = $shopContext->getContextListShopID();
 
 // Get the id of the shop in the current context (useful if the current context is a single shop)

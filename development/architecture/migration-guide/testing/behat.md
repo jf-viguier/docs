@@ -127,7 +127,7 @@ class OrderFeatureContext extends AbstractDomainFeatureContext
 
         SharedStorage::getStorage()->set($orderReference, $orderId->getValue());
     }
-    
+
 //    ...
 ```
 

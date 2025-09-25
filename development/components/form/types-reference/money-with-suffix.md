@@ -14,7 +14,7 @@ The `MoneyWithSuffixType` represents input with currency suffix.
 | suffix   | string | Empty string | Suffix text       |
 
 ## Required Javascript components
-    
+
 None.
 
 ## Code example

@@ -19,7 +19,7 @@ If you wish to use [FormattedTextareaType]({{< relref "/9/development/components
 {{% /notice %}}
 
 ## Required Javascript components
-    
+
 | Component                                                      | Description                                 |
 | -------------------------------------------------------------- | ------------------------------------------- |
 | TranslatableInput | Allows toggling input for different locales |

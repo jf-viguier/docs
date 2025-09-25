@@ -21,9 +21,9 @@ This guide is intended for core developers and contributors who want to understa
 
 In computer programming, _CRUD_ is an acronym for the four basic functions of persistent storage: **create, read, update, and delete**.
 
-PrestaShop handles several logic objects, like Cart, Product, Order, Customer... among many others. When such objects are stored using a unique identifier, we refer to them as **identifiable objects**. 
+PrestaShop handles several logic objects, like Cart, Product, Order, Customer... among many others. When such objects are stored using a unique identifier, we refer to them as **identifiable objects**.
 
-In the Back Office, most identifiable objects are managed using forms and page listings that follow the CRUD pattern. When they do, we refer to those forms as **CRUD Forms**. 
+In the Back Office, most identifiable objects are managed using forms and page listings that follow the CRUD pattern. When they do, we refer to those forms as **CRUD Forms**.
 
 Since CRUD forms share a lot of common behavior, PrestaShop provides a common pattern to handle them all the same way. It is based on four main elements, each responsible for a very specific task:
 
@@ -43,11 +43,11 @@ The _Form Data Provider_ takes care of retrieving data to fill out a form. For t
 {{% funcdef %}}
 
 getData(mixed $id): array
-: 
+:
   Retrieves data for an edit form, using the given id to retrieve the object's data.
 
 getDefaultData(): array
-: 
+:
   Returns default data for a creation form.
 
 {{% /funcdef %}}
@@ -56,9 +56,9 @@ getDefaultData(): array
 
 To create a Form data provider you must implement the following interface:
 
-    \PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface 
+    \PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface
 
-In the example below, you can see a `ContactFormDataProvider` that queries the database (in this case, using `ObjectModel`) to retrieve data when a specific identifiable object id (in this case, `Contact`) is given, and that returns static data with defaults to use when creating a new element. 
+In the example below, you can see a `ContactFormDataProvider` that queries the database (in this case, using `ObjectModel`) to retrieve data when a specific identifiable object id (in this case, `Contact`) is given, and that returns static data with defaults to use when creating a new element.
 
 ```php
 <?php
@@ -78,7 +78,7 @@ final class ContactFormDataProvider implements FormDataProviderInterface
     public function getData($contactId)
     {
         $contactObjectModel = new Contact($contactId);
-        
+
         // check that the element exists in db
         if (empty($contactObjectModel->id)) {
             throw new PrestaShopObjectNotFoundException('Object not found');
@@ -104,7 +104,7 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 ```
 
 {{% notice note %}}
-**This example has been simplified for practical reasons.** 
+**This example has been simplified for practical reasons.**
 
 The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms" >}}).
 {{% /notice %}}
@@ -135,17 +135,17 @@ The _Form Builder_ is used by controllers to build the form that will be shown t
 
 It should be enough for most use cases, so you don't need to create it yourself! It also allows your form to be extended by modules.
 {{% /notice %}}
- 
+
 The common methods that you will be using are:
 
 {{% funcdef %}}
 
 getForm(array $data = [], array $options = []): FormInterface
-: 
+:
   Generates and returns the Symfony form. Additional `$data` and `$options` can be used in your form type.
 
 getFormFor(mixed $id, array $data = [], array $options = []): FormInterface
-: 
+:
   Generates and returns the Symfony form for an editable object which already exists and can be identified. Additional `$data` and `$options` can be used in your form type.
 
 {{% /funcdef %}}
@@ -165,19 +165,19 @@ prestashop.core.form.identifiable_object.builder.contact_form_builder:
     - '@prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider'
 ```
 
-In the example above, we are declaring a specific service for this form based on PrestaShop's implementation of the Form Builder: 
+In the example above, we are declaring a specific service for this form based on PrestaShop's implementation of the Form Builder:
 
     PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Builder\FormBuilder
-  
+
 ...which is instantiated using the base factory:
- 
+
  ```text
 prestashop.core.form.builder.form_builder_factory:create
 ```
 
 ...using two specific arguments:
 
-- The **Form Type**'s class name 
+- The **Form Type**'s class name
 - The **Form Data Provider**'s service name, that we declared previously.
 
 Finally, use it in your controller:
@@ -216,11 +216,11 @@ The _Form Data Handler_ is responsible for persisting the data submitted through
 {{% funcdef %}}
 
 create(array $data): mixed
-: 
+:
   Creates a new identifiable object using the provided data and returns the created object's id.
 
 update(mixed $id, array $data): void
-: 
+:
   Updates the object identified by `$id` using the provided data
 
 {{% /funcdef %}}
@@ -273,7 +273,7 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 ```
 
 {{% notice note %}}
-**This example has been simplified for practical reasons.** 
+**This example has been simplified for practical reasons.**
 
 The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms" >}}).
 {{% /notice %}}
@@ -297,7 +297,7 @@ use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandl
 
 ## Form Handler
 
-The _Form Handler_ is in charge of validating, enriching and saving submitted form data, using the provided [Form Data Handler](#form-data-handler). 
+The _Form Handler_ is in charge of validating, enriching and saving submitted form data, using the provided [Form Data Handler](#form-data-handler).
 
 {{% notice tip %}}
 **PrestaShop provides a default implementation for this object.**
@@ -309,11 +309,11 @@ It provides two methods:
 
 {{% funcdef %}}
 handle(FormInterface $form): FormHandlerResultInterface
-: 
+:
   Saves form data by creating new instance of the related identifiable object.
 
 handleFor($id, FormInterface $form): FormHandlerResultInterface
-: 
+:
   Saves form data by updating the related object identified by `$id`.
 {{% /funcdef %}}
 
@@ -321,15 +321,15 @@ Both methods return an instance of `FormHandlerResultInterface` that provides in
 
 {{% funcdef %}}
 isValid(): bool
-: 
+:
   Indicates whether the form contains errors or not
 
 isSubmitted(): bool
-: 
+:
   Indicates if the form was submitted
-  
+
 getIdentifiableObjectId(): mixed
-: 
+:
   Returns the Id of the identifiable object created by the form submit, if applicable
 {{% /funcdef %}}
 
@@ -369,7 +369,7 @@ public function createAction(Request $request)
 {
     $contactFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.contact_form_builder');
     $contactForm = $contactFormBuilder->getForm();
-    
+
     $contactForm->handleRequest($request);
 
     $contactFormHandler = $this->get('prestashop.core.form.identifiable_object.handler.contact_form_handler');
@@ -380,7 +380,7 @@ public function createAction(Request $request)
 
         return $this->redirectToRoute('admin_contacts_index');
     }
-    
+
     return $this->render('@PrestaShop/Admin/Configure/ShopParameters/Contact/Contacts/create.html.twig', [
         'contactForm' => $contactForm->createView(),
     ]);
@@ -470,7 +470,7 @@ and
 ```
 
 {{% notice note %}}
-**This example has been simplified for practical reasons.** 
+**This example has been simplified for practical reasons.**
 
 The core actually uses CQRS to handle data persistence, which raises a `DomainException` in case of a constraint error (for example, if the identifiable object you are trying to edit doesn't exist). This is handled in the controller by wrapping the code in a try-catch block, then flashing an error message accordingly.
 

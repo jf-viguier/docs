@@ -33,7 +33,7 @@ classDiagram
         int id_word
         int id_shop
         int id_lang
-        varchar word    
+        varchar word
     }
 </div>
 
@@ -61,7 +61,7 @@ There are several actions that can trigger a reindex of a product or the complet
 
 Almost every field / information in the product is weighted to fine tune result relevance.
 
-The weight of fields is adjustable from the `Back Office > Shop Parameters > Search` with the configuration keys below: 
+The weight of fields is adjustable from the `Back Office > Shop Parameters > Search` with the configuration keys below:
 
 | Field | Configuration key | Default weight | Description |
 | --- | --- | --- | --- |

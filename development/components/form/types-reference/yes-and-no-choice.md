@@ -14,7 +14,7 @@ The `YesAndNoChoiceType` represents `select` input with options `Yes` and `No`.
 | required | boolean | false   | Whether field is required or not      |
 
 ## Required Javascript components
-    
+
 None.
 
 ## Code example

@@ -31,7 +31,7 @@ use Symfony\Component\Form\AbstractType;
 class CustomType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
-    {        
+    {
         $builder->add('country', CountryChoiceType::class);
     }
 }

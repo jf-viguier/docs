@@ -19,7 +19,7 @@ Class is responsible for providing configurable zone choices with -- symbol in f
 - [StateGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/StateGridDefinitionFactory.php#L203-L209)
 
 ```php
-return (new FilterCollection())    
+return (new FilterCollection())
     ->add(
         (new Filter('id_zone', ZoneChoiceType::class))
         ->setTypeOptions([

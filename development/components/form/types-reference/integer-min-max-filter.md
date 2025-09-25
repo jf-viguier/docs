@@ -17,7 +17,7 @@ The `IntegerMinMaxFilterType` represents two `IntegerType` fields - one holds mi
 `*` - this type overrides `step` attribute to 1 due to not allow adding floating point numbers as available option.
 
 ## Required Javascript components
-    
+
 None.
 
 ## Preview example

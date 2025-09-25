@@ -13,7 +13,7 @@ The `ShopChoiceTreeType` is subtype of `MaterialChoiceTreeType` which is configu
 | multiple | bool | `true`  | Whether multiple shops can be selected or not. |
 
 ## Required Javascript components
-    
+
 | Component                                                    | Description                        |
 | ------------------------------------------------------------ | ---------------------------------- |
 | ChoiceTree | Manages interaction of choice tree |

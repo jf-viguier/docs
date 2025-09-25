@@ -8,7 +8,7 @@ summary: "Learn how PrestaShop is structured: back-end, front-end, business stac
 # Introduction to PrestaShop's Architecture
 
 PrestaShop is a big project, with several moving parts. In this article you will learn how they are structured and how they work together.
- 
+
 {{% notice note %}}
 Part of this article was originally published in 2019 as a [blog post](https://build.prestashop-project.org/news/prestashop-in-2019-and-beyond-part-1-current-architecture/). It has been updated and adapted for documentation purposes here.
 {{% /notice %}}
@@ -77,7 +77,7 @@ While controllers will be different in BO and FO, pretty much all of PrestaShop'
 - **Adapter code** – located in `/src/Adapter`
 - **Symfony code** (or "PrestaShop Bundle") – located in `/src/PrestaShopBundle`
 
-The **Legacy subsystem** contains the historical, non-namespaced code inherited from previous versions. It's [progressively being replaced since 1.6.1][architecture-1610] by the **Core subsystem**, which uses namespaces and is based on [SOLID principles][SOLID]. 
+The **Legacy subsystem** contains the historical, non-namespaced code inherited from previous versions. It's [progressively being replaced since 1.6.1][architecture-1610] by the **Core subsystem**, which uses namespaces and is based on [SOLID principles][SOLID].
 
 The **Adapter subsystem** acts as a bridge to legacy classes, which are often static, in order to [allow them to be injected][dependency-inversion] in Core classes.
 
@@ -128,7 +128,7 @@ FO controllers are all based on the `FrontController` class. Modules can declare
 
 #### BO Controllers
 
-BO controllers are a little more complex, since they can be either legacy or Symfony based. 
+BO controllers are a little more complex, since they can be either legacy or Symfony based.
 
 Legacy BO controllers are based on the `AdminController` class, whereas Symfony controllers are based on the `FrameworkBundleAdminController` class. Modules can declare BO controllers of their own, and they can be either legacy or symfony based as well. Legacy module controllers must extend the  `ModuleAdminController` class (which is based on `AdminController`), and Symfony modules must simply extend `FrameworkBundleAdminController`.
 
@@ -196,7 +196,7 @@ There are two kinds of themes in PrestaShop: **FO themes** and **BO themes**.
 
 ### FO themes
 
-FO themes define the appearance of the Front Office. 
+FO themes define the appearance of the Front Office.
 
 PrestaShop comes bundled with a default FO theme, called "Classic", but merchant can choose to use a different theme.
 
@@ -211,10 +211,10 @@ Unfortunately, _Classic_ [cannot be updated to recent Bootstrap versions](https:
 Additionally, FO themes can redefine the layout of modules by [overriding their templates][theme-module-override].
 
 ### BO themes
- 
+
 BO themes define the appearance of the Back Office.
 
-Even though BO themes are not interchangeable, PrestaShop comes bundled with two of them: **default** and **new theme**. 
+Even though BO themes are not interchangeable, PrestaShop comes bundled with two of them: **default** and **new theme**.
 
 So why are there two? Legacy controllers are based on Smarty, like FO controller. Symfony controllers, conversely, are based on the [Twig templating engine][twig]. As a result, there's a theme for each one: legacy controllers use the **default** theme, while Symfony ones use the **new theme**. As controllers are progressively being migrated to Symfony, templates are moved from the **default** to the **new theme** and converted from Smarty to Twig.
 
@@ -227,7 +227,7 @@ Here's what was said when [announcing the architecture of 1.7][introducing-symfo
 
 > Twig is Symfony's templating language. In version 1.7, it will be used for all pages that are rewritten to use Symfony [...], but NOT for the global interface (menu, header, etc.) nor the non-rewritten pages, which will still use Smarty. The two templating engines will be available, side by side, during the transition phase.
 
-This means that the global interface is handled by the **default** theme, _even in Symfony pages_. Because they use both Twig _and_ Smarty, this partially explains why some Symfony pages may sometimes be slower than legacy ones. 
+This means that the global interface is handled by the **default** theme, _even in Symfony pages_. Because they use both Twig _and_ Smarty, this partially explains why some Symfony pages may sometimes be slower than legacy ones.
 
 Rest assured, this is a _temporary issue_ which will be solved when everything has been migrated to Twig and Symfony.
 
@@ -272,7 +272,7 @@ As you can see, the module system has many features, making modules very powerfu
 ## Detailed diagram
 
 Now you know PrestaShop is much more complex than it can seem to be at first sight.
- 
+
 Remember the overview at the top of the article? Have a look at this more detailed version now:
 
 {{< figure src="../img/architecture-comprehensive-overview-current.png" title="Comprehensive overview" >}}

@@ -22,7 +22,7 @@ file_put_contents('hooks.txt', PHP_EOL. $hook_name, FILE_APPEND | LOCK_EX);
 ```
 
 After applying this change, access the url of the page you want to migrate. In ``admin-dev/hooks.txt``, you'll see the list of available hooks in the legacy page.
- 
+
 Now, create a simple module that hooks on each one of these hooks and renders something visible that you can retrieve in the new page.
 
 {{% notice note %}}
@@ -47,7 +47,7 @@ $this->dispatchHook('actionAdminPerformanceControllerPostProcessBefore', array('
 ## Dispatching hooks using the Hook dispatcher
 
 If you need to dispatch a hook from a non-controller class, you'll need to inject the [HookDispatcher](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Hook/HookDispatcher.php) class.
- 
+
 If your class is defined as a Symfony service, the HookDispatcher is available as a service called `prestashop.core.hook.dispatcher`.
 
 ```php

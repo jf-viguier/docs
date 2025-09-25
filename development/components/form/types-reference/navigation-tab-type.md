@@ -16,13 +16,13 @@ This form type is used as a container of sub forms, each sub form will be render
 
 ## Usage and description
 
-This form type [was introduced in {{< minver v="8.1.0">}}](https://github.com/PrestaShop/PrestaShop/pull/28752) in the new product page. 
+This form type [was introduced in {{< minver v="8.1.0">}}](https://github.com/PrestaShop/PrestaShop/pull/28752) in the new product page.
 
 The new product page is based on this form type.
 
 Its usage has been documented in an example module: [`demoproductform`](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
 
-The module hooks to `actionProductFormBuilderModifier` to modify the `FormBuilder` for the Product page. 
+The module hooks to `actionProductFormBuilderModifier` to modify the `FormBuilder` for the Product page.
 The `ProductFormModifier` adds a new `CustomTabType` (created by the module) to the `FormBuilder` (which is a `NavigationTabType`).
 
 ```php
@@ -39,7 +39,7 @@ $this->formBuilderModifier->addAfter(
 );
 ```
 
-This `CustomTabType` contains a simple form type: 
+This `CustomTabType` contains a simple form type:
 
 ```php
 public function buildForm(FormBuilderInterface $builder, array $options)
