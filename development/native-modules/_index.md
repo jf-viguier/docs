@@ -11,7 +11,7 @@ These modules are bundled into PrestaShop through composer at build time.
 
 ## List of native modules
 
-Module | Name | Native since | Description 
+Module | Name | Native since | Description
 ------ | ---- | ------------ | -----------
 [blockreassurance](https://github.com/PrestaShop/blockreassurance)                 | Customer reassurance block     | 1.7.0 | Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy.
 [blockwishlist](https://github.com/PrestaShop/blockwishlist)                       | Wishlist                       | 1.7.6 | Allow customers to create wishlists to save their favorite products for later.
@@ -19,7 +19,7 @@ Module | Name | Native since | Description
 [dashactivity](https://github.com/PrestaShop/dashactivity)                         | Activity dashboard widget      | 1.6.0 | Displays an activity widget in the Back office dashboard.
 [dashgoals](https://github.com/PrestaShop/dashgoals)                               | Dashboard goals                | 1.6.0 | Adds a block with your store's forecast.
 [dashproducts](https://github.com/PrestaShop/dashproducts)                         | Dashboard products             | 1.6.0 | Adds a block with a table of your latest orders and a ranking of your products.
-[dashtrends](https://github.com/PrestaShop/dashtrends)                             | Dashboard trends               | 1.6.0 | Adds a block with the evolution of your stores main numbers along with a graphic.                                                                                    
+[dashtrends](https://github.com/PrestaShop/dashtrends)                             | Dashboard trends               | 1.6.0 | Adds a block with the evolution of your stores main numbers along with a graphic.
 [gridhtml](https://github.com/PrestaShop/gridhtml)                                 | Simple HTML table display      | 1.6.0 | Allows the statistics system to display data in a grid.
 [gsitemap](https://github.com/PrestaShop/gsitemap)                                 | Google sitemap                 | 1.7.0 | Generate your Google sitemap file
 [pagesnotfound](https://github.com/PrestaShop/pagesnotfound)                       | Pages not found                | 1.4.0 | Adds a tab to the Stats dashboard, showing the pages requested by your visitors that have not been found.
@@ -33,7 +33,7 @@ Module | Name | Native since | Description
 [ps_customeraccountlinks](https://github.com/PrestaShop/ps_customeraccountlinks)   | Customer account links         | 1.7.0 | Displays a block with links relative to a user's account.
 [ps_customersignin](https://github.com/PrestaShop/ps_customersignin)               | Customer "sign in" link        | 1.7.0 | Adds a block that displays information about the customer.
 [ps_customtext](https://github.com/PrestaShop/ps_customtext)                       | Custom text                    | 1.7.0 | Adds custom text in your store.
-[ps_dataprivacy](https://github.com/PrestaShop/ps_dataprivacy)                     | Customer data privacy block    | 1.7.7 | Adds a block displaying your data privacy policy for more transparency and reassurance. 
+[ps_dataprivacy](https://github.com/PrestaShop/ps_dataprivacy)                     | Customer data privacy block    | 1.7.7 | Adds a block displaying your data privacy policy for more transparency and reassurance.
 [ps_emailsubscription](https://github.com/PrestaShop/ps_emailsubscription)         | Email subscription form        | 1.7.0 | Adds a block for newsletter subscription.
 [ps_facetedsearch](https://github.com/PrestaShop/ps_facetedsearch)                 | Faceted search                 | 1.7.0 | Displays a block with layered navigation filters.
 [ps_faviconnotificationbo](https://github.com/PrestaShop/ps_faviconnotificationbo) | Order Notifications on the Favicon | 1.7.5 | Displays a small icon over the favicon, only in back office, showing the number of notifications.
@@ -77,7 +77,7 @@ Module | Name | Native since | Description
 A few modules have been split between 1.6 & 1.7 versions of PrestaShop, as listed here:
 
 Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 | Native in 1.7
------------------------------------|-----------------------------------| :-------------: 
+-----------------------------------|-----------------------------------| :-------------:
 [advancedeucompliance](https://github.com/PrestaShop/advancedeucompliance) | [ps_legalcompliance](https://github.com/PrestaShop/ps_legalcompliance) | ❌ No
 [bankwire](https://github.com/PrestaShop/bankwire) | [ps_wirepayment](https://github.com/PrestaShop/ps_wirepayment) | ✅ Yes
 [blockadvertising](https://github.com/PrestaShop/blockadvertising) | [ps_advertising](https://github.com/PrestaShop/ps_advertising) | ❌ No
@@ -100,21 +100,21 @@ Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 | Native 
 [blocksearch](https://github.com/PrestaShop/blocksearch) | [ps_searchbar](https://github.com/PrestaShop/ps_searchbar) | ✅ Yes
 [blocksocial](https://github.com/PrestaShop/blocksocial) | [ps_socialfollow](https://github.com/PrestaShop/ps_socialfollow) | ✅ Yes
 [blockspecials](https://github.com/PrestaShop/blockspecials) | [ps_specials](https://github.com/PrestaShop/ps_specials) | ❌ No
-[blocksupplier](https://github.com/PrestaShop/blocksupplier) | [ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist) | ❌ No 
+[blocksupplier](https://github.com/PrestaShop/blocksupplier) | [ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist) | ❌ No
 [blocktopmenu](https://github.com/PrestaShop/blocktopmenu) | [ps_mainmenu](https://github.com/PrestaShop/ps_mainmenu) | ✅ Yes
 [blockuserinfo](https://github.com/PrestaShop/blockuserinfo) | [ps_customersignin](https://github.com/PrestaShop/ps_customersignin) | ✅ Yes
 [blockviewed](https://github.com/PrestaShop/blockviewed) | [ps_viewedproduct](https://github.com/PrestaShop/ps_viewedproduct) | ❌ No
-[carriercompare](https://github.com/PrestaShop/carriercompare) | [ps_carriercomparison](https://github.com/PrestaShop/ps_carriercomparison) | ❌ No 
-[cashondelivery](https://github.com/PrestaShop/cashondelivery) | [ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery) | ❌ No 
+[carriercompare](https://github.com/PrestaShop/carriercompare) | [ps_carriercomparison](https://github.com/PrestaShop/ps_carriercomparison) | ❌ No
+[cashondelivery](https://github.com/PrestaShop/cashondelivery) | [ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery) | ❌ No
 [cheque](https://github.com/PrestaShop/cheque) | [ps_checkpayment](https://github.com/PrestaShop/ps_checkpayment) | ✅ Yes
 [crossselling](https://github.com/PrestaShop/crossselling) | [ps_crossselling](https://github.com/PrestaShop/ps_crossselling) | ✅ Yes
 [feeder](https://github.com/PrestaShop/feeder) | [ps_feeder](https://github.com/PrestaShop/ps_feeder) | ❌ No
-[followup](https://github.com/PrestaShop/followup/) | [ps_reminder](https://github.com/PrestaShop/ps_reminder) | ❌ No 
+[followup](https://github.com/PrestaShop/followup/) | [ps_reminder](https://github.com/PrestaShop/ps_reminder) | ❌ No
 [ganalytics](https://github.com/PrestaShop/ganalytics) | [ps_googleanalytics](https://github.com/PrestaShop/ps_googleanalytics) | ❌ No
 [homefeatured](https://github.com/PrestaShop/homefeatured) | [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts) | ✅ Yes
 [homeslider](https://github.com/PrestaShop/homeslider) | [ps_imageslider](https://github.com/PrestaShop/ps_imageslider) | ✅ Yes
 [mailalerts](https://github.com/PrestaShop/mailalerts) | [ps_emailalerts](https://github.com/PrestaShop/ps_emailalerts) | ❌ No
 [onboarding](https://github.com/PrestaShop/onboarding) | [welcome](https://github.com/PrestaShop/welcome) | ✅ Yes
-[productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) | ❌ No 
-[producttooltip](https://github.com/PrestaShop/producttooltip) | [ps_productinfo](https://github.com/PrestaShop/ps_productinfo) | ❌ No 
+[productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) | ❌ No
+[producttooltip](https://github.com/PrestaShop/producttooltip) | [ps_productinfo](https://github.com/PrestaShop/ps_productinfo) | ❌ No
 [socialsharing](https://github.com/PrestaShop/socialsharing) | [ps_sharebuttons](https://github.com/PrestaShop/ps_sharebuttons) | ✅ Yes

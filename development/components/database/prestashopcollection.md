@@ -6,7 +6,7 @@ title: PrestaShopCollection class
 
 ## Introduction
 
-The PrestaShopCollection component is a Collection of ObjectModel objects. It implements common useful `PHP` interfaces: 
+The PrestaShopCollection component is a Collection of ObjectModel objects. It implements common useful `PHP` interfaces:
 
 - `Iterator`: allows for `foreach` loop on the Collection
 - `ArrayAccess`: allows for offset/index access on the Collection
@@ -31,7 +31,7 @@ if (count($productCollection) > 0) {
 
 ## Create a PrestaShopCollection
 
-To create a PrestaShopCollection, simply instantiate a PrestaShopCollection with the ObjectModel type as a constructor parameter. 
+To create a PrestaShopCollection, simply instantiate a PrestaShopCollection with the ObjectModel type as a constructor parameter.
 
 ```php
 use PrestaShopCollection;
@@ -67,9 +67,9 @@ $firstProduct = $productCollection->getFirst();
 $lastProduct = $productCollection->getLast();
 
 // you can access items in the collection by index, like in a regular array (this class implements ArrayAccess). The index starts at 0
-$thirdProduct = $productCollection[2]; 
+$thirdProduct = $productCollection[2];
 
-// The collection is also iterable (the class implements Iterator): 
+// The collection is also iterable (the class implements Iterator):
 foreach ($productCollection as $product) {
 
 }
@@ -80,7 +80,7 @@ count($productCollection);
 
 ## Filtering a Collection (where, having)
 
-When building the Collection, you may need to filter its content. To do so, use the `where()` method. 
+When building the Collection, you may need to filter its content. To do so, use the `where()` method.
 
 ```php
 public function where($field, $operator, $value, $method = 'where')
@@ -89,7 +89,7 @@ public function where($field, $operator, $value, $method = 'where')
 - `$field` is the field's name to filter
 - `$operator` is the operator to use for filtering (complete list below)
 - `$value` is the value to filter against (can be a scalar or array value)
-- `$method` is the method to use (defaults to `where`, or can be `having`, see below for more informations) 
+- `$method` is the method to use (defaults to `where`, or can be `having`, see below for more informations)
 
 ### List of operators
 
@@ -123,7 +123,7 @@ $productCollection->where('reference', 'LIKE', 'REF-%'); // find products with r
 
 ### `Having` method
 
-There is also `having()` method available, which calls `where()` with the parameter `$method` set to `having`. 
+There is also `having()` method available, which calls `where()` with the parameter `$method` set to `having`.
 
 ```php
 public function having($field, $operator, $value)
@@ -131,21 +131,21 @@ public function having($field, $operator, $value)
 
 ## Joining to associated entities (join)
 
-When building the Collection, you may need to join with other ObjectModel entities. 
-You can join on associations that are declared in the $definition of the ObjectModel. 
+When building the Collection, you may need to join with other ObjectModel entities.
+You can join on associations that are declared in the $definition of the ObjectModel.
 
 ```php
 public function join($association, $on = '', $type = null)
 ```
 
-Join `manufacturer` to your `Product` collection: 
+Join `manufacturer` to your `Product` collection:
 
 ```php
 $productCollection = new PrestaShopCollection('Product');
 $productCollection->join('manufacturer');
 ```
 
-You can join on a different field by specifying the field name as a second parameter: 
+You can join on a different field by specifying the field name as a second parameter:
 
 ```php
 $productCollection = new PrestaShopCollection('Product');
@@ -162,7 +162,7 @@ $productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT
 
 ### Using `where` with `join`
 
-One of the interest of joining other ObjectModel entities to your collection, is the possibility to filter on the external entity with `where()`. 
+One of the interest of joining other ObjectModel entities to your collection, is the possibility to filter on the external entity with `where()`.
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
@@ -172,7 +172,7 @@ $productCollection = (new PrestaShopCollection('Product'))
 
 ## Ordering a Collection (order by)
 
-To order your collection, use the `orderBy()` method. 
+To order your collection, use the `orderBy()` method.
 
 ```php
 public function orderBy($field, $order = 'asc')
@@ -216,26 +216,26 @@ $productCollection = (new PrestaShopCollection('Product'))
     ->setPageSize(100); // will get only 100 items
 ```
 
-If `$page_size` is set, the collection will return the first `$page_size` items. 
+If `$page_size` is set, the collection will return the first `$page_size` items.
 
 If you need to paginate and access the second page of a collection, you can use the following example:
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
     ->setPageSize(100) // will get only 100 items
-    ->setPageNumber(2); // but from page 2, equivalent to offset=(pageNumber - 1) * page_size. 
+    ->setPageNumber(2); // but from page 2, equivalent to offset=(pageNumber - 1) * page_size.
 ```
 
-- Getting the page: `1` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement: 
+- Getting the page: `1` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement:
     `LIMIT 100` or `LIMIT 100 OFFSET 0` or `LIMIT 0,100`
 
-- Getting the page: `2` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement: 
+- Getting the page: `2` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement:
     `LIMIT 100 OFFSET 100` or `LIMIT 100,100`
 
-- Getting the page: `3` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement: 
+- Getting the page: `3` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement:
     `LIMIT 100 OFFSET 200` or `LIMIT 200,100`
 
 {{% notice info %}}
-Known issue: If the entity has multi-lang attributes, when not using `$id_lang` in the `PrestaShopCollection` constructor, and using pagination (`setPageSize()`, `setPageNumber()`), pagination will be broken. 
+Known issue: If the entity has multi-lang attributes, when not using `$id_lang` in the `PrestaShopCollection` constructor, and using pagination (`setPageSize()`, `setPageNumber()`), pagination will be broken.
 Please set an `$id_lang` in the constructor to use pagination features for entities with multi-lang attributes.
 {{% /notice %}}

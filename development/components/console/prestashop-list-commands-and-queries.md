@@ -13,4 +13,3 @@ title: prestashop:list:commands-and-queries
 This command aims to list all available CQRS commands and queries.
 
 That permits to list all classes, with their types (Command or Query) and their description.
-

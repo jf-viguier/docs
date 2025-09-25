@@ -8,11 +8,11 @@ weight: 1
 
 # CsvResponse component
 
-Introduced in {{< minver v="1.7.3" >}}, this component allows to export data to CSV Format. 
+Introduced in {{< minver v="1.7.3" >}}, this component allows to export data to CSV Format.
 
 ## Usage of CsvResponse component
 
-To use this component, add a `use` statement in your module: 
+To use this component, add a `use` statement in your module:
 
 ```php
 use PrestaShopBundle\Component\CsvResponse;
@@ -42,7 +42,7 @@ $headersData = [
 You can remove columns from your export by ignoring them in `$headersData`.
 {{% /notice %}}
 
-Finally, create and return your `CsvResponse` export: 
+Finally, create and return your `CsvResponse` export:
 
 ```php
 return (new CsvResponse())
@@ -71,13 +71,13 @@ return (new CsvResponse())
 
 ### Advanced usage with a callback function to export large amounts of data (chunking)
 
-Sometimes you will need to export large parts of data with a large memory usage, that can cause performance issues. 
-To achieve this, you can't just query your database and retrieve your large amount of data. 
-You need to chunk your data, and build your csv export chunk by chunk. 
+Sometimes you will need to export large parts of data with a large memory usage, that can cause performance issues.
+To achieve this, you can't just query your database and retrieve your large amount of data.
+You need to chunk your data, and build your csv export chunk by chunk.
 
-Let's understand how to do this: 
+Let's understand how to do this:
 
-1) Create a `callback function`, with two parameters: `$offset` and `$limit`. 
+1) Create a `callback function`, with two parameters: `$offset` and `$limit`.
 
 ```php
 $dataCallback = function ($offset, $limit){
@@ -88,7 +88,7 @@ $dataCallback = function ($offset, $limit){
 
 This `callback function` returns a set of data from a repository (eg. a database), with `$offset` and `$limit` parameters (eg. a `LIMIT 0,5000` SQL query).
 
-2) Create your CsvResponse with your `callback function` as data: 
+2) Create your CsvResponse with your `callback function` as data:
 
 ```php
 return (new CsvResponse())
@@ -111,11 +111,11 @@ Since `$dataCallback` is a `callable`, `CsvResponse` will loop over your `callba
 There are two modes when retrieving data with a `callback function`:
 
 - `CsvResponse::MODE_OFFSET`: Your callback function is receiving `$offset` (index to start retrieving items at) and `$limit` (count of items to retrieve). This is the equivalent of MySql `LIMIT 0,100`, `LIMIT 100,100`, `LIMIT 200,100`.
-- `CsvResponse::MODE_PAGINATION`: Your callback function is receiving `$offset` (page number) and `$limit` (count of items to retrieve), and will handle its pagination itself. 
+- `CsvResponse::MODE_PAGINATION`: Your callback function is receiving `$offset` (page number) and `$limit` (count of items to retrieve), and will handle its pagination itself.
 
 The default mode is `MODE_PAGINATION`.
 
-When looping over your `callback function`, the `CsvResponse` is retrieving `$limit` items, while there are results. 
+When looping over your `callback function`, the `CsvResponse` is retrieving `$limit` items, while there are results.
 
 #### Mode pagination
 
@@ -151,7 +151,7 @@ return (new CsvResponse())
 
 ### Hide header line from export
 
-From {{< minver v="8.0" >}}, to disable header line from export, use the `setIncludeHeaderRow()` method. This method expects a boolean parameter indicating if the header line should be displayed or not. 
+From {{< minver v="8.0" >}}, to disable header line from export, use the `setIncludeHeaderRow()` method. This method expects a boolean parameter indicating if the header line should be displayed or not.
 
 ```php
 return (new CsvResponse())

@@ -28,7 +28,7 @@ MyCustomCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->getContainer()->get('prestashop.adapter.legacy_context_loader')->loadGenericContext();
-        
+
         ...
     }
 });

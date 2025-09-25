@@ -220,9 +220,8 @@ PrestaShop comes with a lot of Grids (Products, Customers, Orders & etc) and kee
 
 ## Modules
 
-- Module names should contain only lower case and numbers. 
-- [Native modules][native-modules]' names must be prefixed with "ps_" (e.g. `ps_linklist`).  
+- Module names should contain only lower case and numbers.
+- [Native modules][native-modules]' names must be prefixed with "ps_" (e.g. `ps_linklist`).
 
 [native-modules]: {{< relref "../native-modules/" >}}
 [coding-standards]: {{< ref "/9/development/coding-standards/" >}}
-

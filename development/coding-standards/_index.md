@@ -86,7 +86,7 @@ class MyClass
 {
     public function doStuff(string $foo, array $bar): void
     {
-    }   
+    }
 }
 ```
 
@@ -149,7 +149,7 @@ You can run the linter to help you comply with these coding standards:
 
 ## TypeScript
 
-All `admin-dev/themes/new-theme/js` files are coded in TypeScript. Classes and functions in .ts files must be strictly typed. 
+All `admin-dev/themes/new-theme/js` files are coded in TypeScript. Classes and functions in .ts files must be strictly typed.
 
 You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder using the `@PSTypes` relative path and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
 

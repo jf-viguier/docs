@@ -14,12 +14,12 @@ Orders can be created from a Cart, either in Front Office (FO) by the Customer o
 
 ### Cart in Front Office
 
-The Cart is created in database once first Product is being added into it. 
+The Cart is created in database once first Product is being added into it.
 - If Customer is not signed in (Guest), and he adds a Product to Cart, the Cart is created, but not associated to a Customer.
 - If a Guest already has a Cart and signs in, the Cart is assigned to him instead of creating a new one.
 
 {{% notice note %}}
-When a Customer signs-in, has an empty Cart in its Cookie (or does not have a Cart) and has a previous non ordered Cart in its profile, the default behaviour of PrestaShop is to reload its most recent non ordered Cart. That behaviour can be adjusted in `Configure -> Shop parameters -> Customer settings`, the related setting is `PS_CART_FOLLOWING` : `Re-display cart at login`. 
+When a Customer signs-in, has an empty Cart in its Cookie (or does not have a Cart) and has a previous non ordered Cart in its profile, the default behaviour of PrestaShop is to reload its most recent non ordered Cart. That behaviour can be adjusted in `Configure -> Shop parameters -> Customer settings`, the related setting is `PS_CART_FOLLOWING` : `Re-display cart at login`.
 This setting is implemented in: [Context.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Context.php#L365).
 {{% /notice %}}
 
@@ -64,17 +64,17 @@ flowchart TB
 Please note that if a Cart contains only Virtual Products, there is no `checkout-addresses-step` and `checkout-delivery-step`. It goes directly from `checkout-personal-information-step` to `checkout-payment-step`.
 {{% /notice %}}
 
-1. **Associate to Customer** (checkout-personal-information-step): details like name, email, birthday, etc. In Front Office you can either fill 
-   this information manually as a guest (and optionally create a new Customer account) or log in as an existing Customer. 
+1. **Associate to Customer** (checkout-personal-information-step): details like name, email, birthday, etc. In Front Office you can either fill
+   this information manually as a guest (and optionally create a new Customer account) or log in as an existing Customer.
    If you create an Order from Back Office, you will be asked to select an existing Customer before modifying the existing Cart or creating a new one.
-2. **Select shipping and invoice addresses** (checkout-addresses-step): provide the shipping and invoice addresses information. 
+2. **Select shipping and invoice addresses** (checkout-addresses-step): provide the shipping and invoice addresses information.
    The shipping (a.k.a. delivery) address is where the Ordered Products should be sent, while the invoice address is used as a document billing address.
-   In Front Office, you can provide one address to be used as both - shipping and invoice. In Back Office, you must select shipping and invoice addresses 
-   (the same address can also be selected for both - shipping and invoices). 
+   In Front Office, you can provide one address to be used as both - shipping and invoice. In Back Office, you must select shipping and invoice addresses
+   (the same address can also be selected for both - shipping and invoices).
 3. **Select a shipping method** (checkout-delivery-step): after this step is complete, you will need to select one of the available Carriers
-   (Carriers are searched by delivery address, sometimes the total weight of the Products, their prices, and information about the Customer (a group to which the Customer belongs) and can be modified by Shop Employees on Improve -> Shipping -> Carriers page). 
+   (Carriers are searched by delivery address, sometimes the total weight of the Products, their prices, and information about the Customer (a group to which the Customer belongs) and can be modified by Shop Employees on Improve -> Shipping -> Carriers page).
    Note that the Carrier will not be available if a selected country or zone is disabled (in Back Office International -> Locations) or Carrier shipping and locations settings are not configured.
-3. **Select payment method** (checkout-payment-step): choose how to pay for the Order. Shop Employees can configure payment methods in 
+3. **Select payment method** (checkout-payment-step): choose how to pay for the Order. Shop Employees can configure payment methods in
    Back Office `Payment -> Payment methods`.
    All payments are handled by payment modules. PrestaShop comes with 3 [payment modules]({{< relref "/9/modules/payment" >}}) by default:
 
@@ -111,7 +111,7 @@ click `More actions -> Send pre-filled Order to the Customer by email` in summar
 {{% /notice %}}
 
 {{% notice note %}}
-**Dive more in PrestaShop's Checkout process:** 
+**Dive more in PrestaShop's Checkout process:**
 Learn how it works under the hood by looking at:
 - [classes/checkout/CheckoutSession.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutSession.php)
 - [classes/checkout/CheckoutProcess.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutProcess.php)
