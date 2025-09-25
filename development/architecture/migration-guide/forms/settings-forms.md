@@ -46,7 +46,7 @@ The idea is to uncouple data management from Controllers, so populating the form
 ## Form Handlers
 
 Once you are able to manage data loaded to or sent by your forms, you need a way to build those forms (which can be themselves composed of multiple forms).
- 
+
 For this, you need a Form Handler. You can either implement it yourself as a class (based on the interface `PrestaShop\PrestaShop\Core\Form\FormHandlerInterface`), or use PrestaShop's core `FormHandler` to create a service in a declarative way – no need for a new class!
 
 As an example, here's how the Administration page's Form Handler service is declared:
@@ -68,17 +68,17 @@ prestashop.adapter.administration.general.form_handler:
 Let's look at the arguments one by one:
 
 - `'@form.factory'`
-    
+
     This is used to render the form. You can keep the default value.
-    
+
 - `'@prestashop.core.hook.dispatcher'`
 
     This is used to dispatch hooks related to the form. You can also keep this value by default.
-     
+
 - `'@prestashop.adapter.administration.form_provider'`
- 
+
     Here you need to specify your form's Data Provider.
- 
+
 - `'PrestaShopBundle\Form\Admin\Configure\AdvancedParameters\Administration\GeneralType'`is the FQCN of the form type you want to render in your form.
 
 - `'AdministrationPageGeneral'`
@@ -104,12 +104,12 @@ $form->handleRequest($request);
 if ($form->isSubmitted()) {
     $data = $form->getData();
     $saveErrors = $this->get('prestashop.adapter.performance.form_handler')->save($data);
-    
+
     if (0 === count($saveErrors)) {
         $this->addFlash('success', $this->trans('Successful update.', 'Admin.Notifications.Success'));
         return $this->redirectToRoute('admin_performance');
     }
-    
+
     $this->flashErrors($saveErrors);
 }
 

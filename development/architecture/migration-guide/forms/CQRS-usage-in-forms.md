@@ -8,7 +8,7 @@ weight: 30
 {{% notice note %}}
 This article assumes that you are already familiar with CQRS and [CRUD forms]({{< relref "CRUD-forms" >}}), as this topic only demonstrates the usage of the CQRS approach.
 {{% /notice %}}
- 
+
 ## The basics
 
 To use CQRS you need to:
@@ -123,9 +123,9 @@ public function create(array $data)
         $data['title'],
         $data['is_messages_saving_enabled']
     );
-    
+
     $contactId = $this->commandBus->handle($addContactCommand);
-    
+
     return $contactId->getValue();
 }
 ```
