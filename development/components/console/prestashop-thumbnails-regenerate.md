@@ -15,6 +15,8 @@ title: prestashop:thumbnails:regenerate
 
 ## Description
 
+Since {{< minver v="9.1.x" >}}.
+
 This command aims to regenerate thumbnails via command line.
 
 ## Examples
