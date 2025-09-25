@@ -58,7 +58,7 @@ Shop parameters > Search > Search > Add new / edit alias              |       |
 Shop parameters > Search > Tags > Add new / edit tag                  |       |
  | |
 **Catalog** | |
-Orders > Invoices                                                     | 1.7.5 | 
+Orders > Invoices                                                     | 1.7.5 |
 Orders > Delivery Slips                                               | 1.7.5 | 8.0
 Orders > Credit Slips                                                 | 1.7.7 | 1.7.8
 Shipping > Preferences                                                | 1.7.5 | 1.7.8
@@ -73,7 +73,7 @@ Catalog > Attributes & Features > Add new / edit attribute            |       |
 Catalog > Attributes & Features > Add new / edit attribute value      |       |
 Catalog > Discounts > Cart rules > Add new / edit catalog price rule  |       |
 Catalog > Discounts > Cart rules > Add new / edit cart rule           |       |
-Payment > Preferences                                                 | 1.7.5 | 
+Payment > Preferences                                                 | 1.7.5 |
 Customers > Addresses                                                 | 1.7.7 | 1.7.8
 Customers > Addresses > Add new / edit address                        | 1.7.7 | 1.7.8
 Customers > Customers                                                 | 1.7.6 | 1.7.8
@@ -81,7 +81,7 @@ Customers > Customers > View customer                                 | 1.7.6 | 
 Customers > Customers > Add new / edit customer                       | 1.7.6 | 1.7.8
 Customer Service > Order Messages > Add new / edit order message      | 1.7.7 | 1.7.8
 Customer Service > Customer Service                                   |       |
-Customer Service > Merchandise Returns > Edit                         | 8.0   | 
+Customer Service > Merchandise Returns > Edit                         | 8.0   |
  | |
 **Improve** | |
 Design > Theme & Logo > Add new theme                                 | 1.7.6 | 1.7.8

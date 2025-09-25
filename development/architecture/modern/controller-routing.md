@@ -102,7 +102,7 @@ class SomeController extends FrameworkBundleAdminController
      * )
      *
      */
-    public function fooAction(Request $request) { 
+    public function fooAction(Request $request) {
         // action code
     }
 }
@@ -169,7 +169,7 @@ use PrestaShopBundle\Security\Annotation\DemoRestricted;
  *
  */
 public function fooAction(Request $request) {
-    // do something here  
+    // do something here
 }
 ```
 
@@ -265,7 +265,7 @@ route_name:
         _controller: 'PrestaShopBundle\Controller\Path\To\ControllerClass::{actionName}Action'
         _legacy_controller: LegacyController
         _legacy_link: {LegacyController}:{actionName}
-        
+
 # In some cases several controllers/actions are managed by the same migrated controller
 # You have the possibility to set an array as _legacy_link thus preventing you from defining alias routes
 other_route_name:
@@ -276,7 +276,7 @@ other_route_name:
         _legacy_controller: LegacyController
         _legacy_link:
             - {LegacyController}:{actionName}
-            - {LegacyController}:{aliasActionName}        
+            - {LegacyController}:{aliasActionName}
 ```
 
 The `actionName` part is optional for the **index** action (equivalent to **list**), therefore these three notations are equivalent:

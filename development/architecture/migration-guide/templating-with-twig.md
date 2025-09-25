@@ -101,7 +101,7 @@ $this->trans('Before activating the webservice, you must be sure to: ', array(),
 
 ## Manage modern assets with Webpack
 
-PrestaShop uses Webpack to build and bundle static assets in PrestaShop, like Javascript and stylesheets. 
+PrestaShop uses Webpack to build and bundle static assets in PrestaShop, like Javascript and stylesheets.
 
 {{% notice note %}}
 The root folder for the modern theme is `/admin-dev/themes/new-theme`.
