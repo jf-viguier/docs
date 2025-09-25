@@ -54,7 +54,7 @@ graph
 ### FormBuilder
 
 In most scenarios, the Controller initially instantiates the FormBuilder. This component constructs the necessary Form, incorporating all Form Types. It also retrieves data from the FormDataProvider, ensuring that the form is populated with the appropriate data.
-The `FormBuilder` will build the required `Form` with all `Form Types`, and retrieve data from the `FormDataProvider`. 
+The `FormBuilder` will build the required `Form` with all `Form Types`, and retrieve data from the `FormDataProvider`.
 
 ### FormDataProvider
 
@@ -66,16 +66,16 @@ The FormDataProvider is responsible for retrieving data from the Database. This 
 
 Developers have access to a wide range of field types ([see Symfony types](https://symfony.com/doc/4.4/reference/forms/types.html)) that come from the Symfony framework. Additionally, PrestaShop enhances this selection with its own reusable field types.
 
-A complete reference of PrestaShop form types can be found [here]({{< relref "/9/development/components/form/types-reference">}}). 
+A complete reference of PrestaShop form types can be found [here]({{< relref "/9/development/components/form/types-reference">}}).
 
 ### FormHandler
 
 The `FormHandler` is responsible of:
 
-- extracting the form data, 
+- extracting the form data,
 - triggering the `actionBeforeCreate<FormName>FormHandler`, `actionBeforeUpdate<FormName>FormHandler`, `actionAfterCreate<FormName>FormHandler` and `actionAfterUpdate<FormName>FormHandler` hooks
 - calling the `FormDataHandler`
-- returning a `FormHandlerResult` 
+- returning a `FormHandlerResult`
 
 ### FormDataHandler
 
@@ -93,7 +93,7 @@ To render forms in a clean and user-friendly way, PrestaShop extended Symfony's 
 
 ## Customize forms by modules
 
-### Concepts 
+### Concepts
 
 - `FormModifier`: This component is used to modify the Form, primarily for module integration.
 - `FormModifier` hook_: Connects the FormModifier to the form, enabling modifications.
@@ -141,7 +141,7 @@ graph
 
 A `FormModifier` (also known as `FormBuilderModifier`) allows you to alter the contents of a Form. It is particularly useful within modules, allowing developers to add, modify, or remove elements from the form as required.
 
-It's been implemented in an example module: [DemoProductForm2](https://github.com/PrestaShop/example-modules/blob/master/demoproductform2/src/Form/Modifier/ProductFormModifier.php). 
+It's been implemented in an example module: [DemoProductForm2](https://github.com/PrestaShop/example-modules/blob/master/demoproductform2/src/Form/Modifier/ProductFormModifier.php).
 
 ```php
 namespace PrestaShop\Module\DemoProductForm\Form\Modifier;
@@ -159,7 +159,7 @@ final class ProductFormModifier
         ?ProductId $productId,
         FormBuilderInterface $productFormBuilder
     ): void {
-        [...]        
+        [...]
     }
 ```
 
@@ -176,7 +176,7 @@ services:
 
 A `FormModifier` by itself will not affect a `Form` unless it is properly hooked. To ensure functionality, the `FormModifier` must be linked by implementing the [action<Object>FormBuilderModifier]({{<relref "/9/modules/concepts/hooks/list-of-hooks/action<FormName>FormBuilderModifier">}}).
 
-In the module, register the hook and implement the method, for example, for the `Product` entity: 
+In the module, register the hook and implement the method, for example, for the `Product` entity:
 
 ```php
 public function install()
@@ -196,7 +196,7 @@ public function hookActionProductFormBuilderModifier(array $params): void
 
 ### FormDataProviderDefaultData Hook
 
-The [`Action<FormName>FormDataProviderDefaultData` hook]({{<relref "/9/modules/concepts/hooks/list-of-hooks/action<FormName>FormDataProviderDefaultData">}}) allows your module to provide or modify the default values sent to forms. 
+The [`Action<FormName>FormDataProviderDefaultData` hook]({{<relref "/9/modules/concepts/hooks/list-of-hooks/action<FormName>FormDataProviderDefaultData">}}) allows your module to provide or modify the default values sent to forms.
 
 ```php
 public function install()
@@ -214,7 +214,7 @@ This hook has been implemented as an example in our [example-modules repository]
 
 ### FormDataProviderData Hook
 
-The [`Action<FormName>FormDataProviderData` hook]({{<relref "/9/modules/concepts/hooks/list-of-hooks/action<FormName>FormDataProviderData">}}) allows your module to provide or modify the values sent to forms. 
+The [`Action<FormName>FormDataProviderData` hook]({{<relref "/9/modules/concepts/hooks/list-of-hooks/action<FormName>FormDataProviderData">}}) allows your module to provide or modify the values sent to forms.
 
 ```php
 public function install()
@@ -248,7 +248,7 @@ graph TD
     subgraph "Update"
         BA(actionBeforeUpdate<strong>FormName</strong>FormHandler) --> BB(IdentifiableObject updated)
         BB --> BC(actionAfterUpdate<strong>FormName</strong>FormHandler)
-    end  
+    end
     subgraph "Create"
         A(actionBeforeCreate<strong>FormName</strong>FormHandler) --> B(IdentifiableObject created)
         B --> C(actionAfterCreate<strong>FormName</strong>FormHandler)
@@ -267,7 +267,7 @@ public function hookActionAfterUpdateCombinationFormFormHandler(array $params): 
 
 ## Examples
 
-You can find some examples of how to use forms in your modules to extend PrestaShop capabilities: 
+You can find some examples of how to use forms in your modules to extend PrestaShop capabilities:
 
 | Subject | Link |
 | --- | --- |

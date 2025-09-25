@@ -15,7 +15,7 @@ The `TextWithLengthCounterType` represents text input with value length counter.
 | input      | string | `text`                   | Configured input type `text` or `textarea`                                   |
 
 ## Required Javascript components
-    
+
 | Component                                                                 | Description                           |
 | ------------------------------------------------------------------------- | ------------------------------------- |
 | TextWithLengthCounter | Calculates remaining length for input |

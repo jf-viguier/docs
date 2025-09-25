@@ -20,7 +20,7 @@ Learn more about [Javascript components and how to use them]({{<relref "/9/devel
 ```php
 <?php
 // path/to/your/CustomType.php
-    
+
 use PrestaShopBundle\Form\Admin\Type\ChangePasswordType;
 use Symfony\Component\Form\AbstractType;
 

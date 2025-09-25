@@ -15,7 +15,7 @@ The `NumberMinMaxFilterType` represents two `NumberType` fields - one holds mini
 | max_field_options | array | array ( 'attr' => array ( 'placeholder' => $this->trans('Max', [], 'Admin.Global')), )   | Accepts all possible values that `NumberType` has      |
 
 ## Required Javascript components
-    
+
 None.
 
 ## Code example

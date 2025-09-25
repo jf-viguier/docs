@@ -15,7 +15,7 @@ The `UnitTypeExtension` used with `NumberType` or `IntegerType` represents a num
 | unit   | string | `unit`  | Type of unit (e.g. Kg, Cm & etc) |
 
 ## Required Javascript components
-    
+
 None.
 
 ## Code example
