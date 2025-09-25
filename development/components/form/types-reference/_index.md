@@ -53,8 +53,6 @@ Developers can already use a large list of field types (see [Symfony types](http
 | [`TranslatableType`](translatable) | PrestaShopBundle\Form\Admin\Type | Class TranslatableType adds translatable inputs with custom inner type to forms. Language selection uses a dropdown. |
 | [`TranslateType`](translate-type) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a translatable form. Language selection uses tabs. |
 | [`TypeaheadCustomerCollectionType`](typeahead-customer-collection-type) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to select a customer. |
-| [`TypeaheadProductCollectionType`](typeahead-product-collection-type) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to select a product, with or without attribute field. |
-| [`TypeaheadProductPackCollectionType`](typeahead-product-pack-collection-type) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to select a product, with or without attribute field. |
 | [`UnavailableType`](unavailable-type) | PrestaShopBundle\Form\Admin\Type | This form type is useful during development phase to show part of a form that are not available yet. |
 | [`YesAndNoChoiceType`](yes-and-no-choice) | PrestaShopBundle\Form\Admin\Type | Symfony `ChoiceType` with `Yes` and `No` choices. |
 | [`ZoneChoiceType`](zone-choice-type) | PrestaShopBundle\Form\Admin\Type | Class is responsible for providing configurable zone choices with -- symbol in front of array |
