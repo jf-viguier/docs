@@ -62,4 +62,5 @@ Developers can already use a large list of field types (see [Symfony types](http
 | [`MaterialChoiceTableType`](material-choice-table) | PrestaShopBundle\Form\Admin\Type\Material | Class MaterialChoiceTableType renders checkbox choices using table layout. |
 | [`MaterialChoiceTreeType`](material-choice-tree) | PrestaShopBundle\Form\Admin\Type\Material | Class MaterialChoiceTreeType renders trees using table layout. |
 | [`MaterialMultipleChoiceTableType`](material-multiple-choice-table) | PrestaShopBundle\Form\Admin\Type\Material | Class MaterialMultipleChoiceTableType renders multiple checkbox choices using table layout. |
+| [`ProductSearchType`](product-search-type) | PrestaShopBundle\Form\Admin\Type | This form type is used to select a product. |
 | [`UnitTypeExtension`](unit-type-extension) | PrestaShopBundle\Form\Admin\Extension | Class UnitTypeExtension adds an Unit to an `IntegerType` or a `NumberType` |
