@@ -33,7 +33,7 @@ Developers can already use a large list of field types (see [Symfony types](http
 | [`ImagePreviewType`](image-preview-type) | PrestaShopBundle\Form\Admin\Type | This form type is used to display an image value without providing an interactive input to edit it. It is based on a hidden input so it could be changed programmatically, or be used just to display an image in a form. |
 | [`IntegerMinMaxFilterType`](integer-min-max-filter) | PrestaShopBundle\Form\Admin\Type | Defines the integer type two inputs of min and max value - designed to fit grid in grid filter. |
 | [`IpAddressType`](ip-address) | PrestaShopBundle\Form\Admin\Type | Extended input type for IP addresses. Displays a bouton to add the user's one to the list. |
-| [`LogSeverityChoiceType`](log-severity-type) | PrestaShopBundle\Form\Admin\Type | `ChoiceType` of `PrestaShopLogger` Log levels |
+| [`LogSeverityChoiceType`](log-severity-choice-type) | PrestaShopBundle\Form\Admin\Type | `ChoiceType` of `PrestaShopLogger` Log levels |
 | [`MoneyWithSuffixType`](money-with-suffix) | PrestaShopBundle\Form\Admin\Type | Class `MoneyWithSuffixType` is a Symfony `MoneyType`, which also has a suffix string right after the currency sign. |
 | [`NavigationTabType`](navigation-tab-type) | PrestaShopBundle\Form\Admin\Type | This form type is used as a container of sub forms, each sub form will be rendered as a part of navigation tab component. Each first level child is used as a different tab, its label is used for the tab name and it's widget as the tab content. |
 | [`NumberMinMaxFilterType`](number-min-max-filter) | PrestaShopBundle\Form\Admin\Type | Defines the number type two inputs of min and max value - designed to fit grid in grid filter. |
