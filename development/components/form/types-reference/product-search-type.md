@@ -16,7 +16,7 @@ It is the remplacement of [TypeaheadProductCollectionType]({{<relref "/8/develop
 | remote_url | string | none | Overrides the default search endpoint with a custom URL.
 | min_length | integer | 3 | Minimum number of characters required before triggering the search.
 | filtered_identities | array | [] | List of product IDs that must be excluded from the search results.
-
+| limit | integer | 1 | The number of item to display.
 
 ## Required Javascript components
 
