@@ -7,33 +7,64 @@ title: EntitySearchInputType
 This form type is used for an OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote URL) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated item.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [EntitySearchInputType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/EntitySearchInputType.php)
+- Reference: [EntitySearchInputType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/EntitySearchInputType.php)
 
 ## Type options
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| min_length | integer | 3 | Minimum number of characters required before triggering the search.
+| remote_url | string | none | Overrides the default search endpoint with a custom URL.
+| filtered_identities | array | [] | List of entity IDs that must be excluded from the search results.
+| limit | integer | 1 | The number of item to display.
+
+## Required Javascript components
+
+| Component                                                            | Description                         |
+|:---------------------------------------------------------------------|:------------------------------------|
+| EntitySearchInput | Handles the search input, AJAX calls, and product selection logic. |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use them]({{<relref "/9/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 
-- [DescriptionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/Description/DescriptionType.php#L144-L158)
+- [RedirectOptionType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Category/SEO/RedirectOptionType.php#L86-L96)
 
 ```php
-$builder->add('related_products', EntitySearchInputType::class, [
-    'label' => $this->trans('Related products', 'Admin.Catalog.Feature'),
-    'label_tag_name' => 'h3',
-    'entry_type' => RelatedProductType::class,
-    'entry_options' => [
-        'block_prefix' => 'related_product',
-    ],
-    'remote_url' => $this->router->generate('admin_products_v2_search_associations', [
-        'languageCode' => $this->employeeIsoCode,
-        'query' => '__QUERY__',
-    ]),
-    'min_length' => 3,
-    'filtered_identities' => $productId > 0 ? [$productId] : [],
-    'placeholder' => $this->trans('Search product', 'Admin.Catalog.Help'),
-])
+$builder
+    ->add('target', EntitySearchInputType::class, [
+        'required' => false,
+        'limit' => 1,
+        'min_length' => 3,
+        'label' => false,
+        'remote_url' => $this->router->generate('admin_categories_get_ajax_categories', ['query' => '__QUERY__']),
+        'placeholder' => $this->trans('To which category should the page redirect?', 'Admin.Catalog.Help'),
+        'help' => $this->trans('By default, the closest active parent category will be used if no category is selected.', 'Admin.Catalog.Help'),
+        'filtered_identities' => [$options['id_category'], $this->homeCategoryId],
+    ]);
+```
+
+In your template the prestashop ui kit must be added to your `form`.
+
+```twig
+{% form_theme form '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
+```
+
+Then in Javascript you have to connect `EntitySearchInput` component.
+
+```js
+const elementId = $("#form_prefix_field_name");
+
+let searchInput = new window.prestashop.component.EntitySearchInput(elementId, {
+    onRemovedContent: () => {
+      console.log('Event on product deletion');
+    },
+    onSelectedContent: () => {
+      console.log('Event on product selection');
+    }
+});
 ```
 
 ## Preview example
