@@ -53,7 +53,7 @@ The chosen structure to handle such pages was the following:
 
 Since the DataProvider interacts with ObjectModel, it belongs to [Adapter namespace][adapter-namespace].
 
-## Phase 2: listings
+## Phase 2 : listings
 
 For migrating Listing pages, the [Grid component][grid-pages] was built.
 
@@ -74,7 +74,7 @@ However the Grid Actions use ObjectModel, for example to enable/disable a Catego
 
 This is when we decided to introduce [CQRS][cqrs].
 
-## Phase 3: [CQRS][cqrs]
+## Phase 3 : [CQRS][cqrs]
 
 We wanted to build a strong frontier between migrated code and legacy code. Since re-writing all the code would be too long, we needed to continue relying on the business logic legacy code to power PrestaShop.
 
