@@ -57,7 +57,7 @@ class CustomType extends TranslatorAwareType
 
 ```
 
-In your template the prestashop ui kit must be added to your `form`.
+In your template, the PrestaShop UI Kit must be added to your `form`.
 
 ```twig
 {% form_theme form '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
