@@ -63,7 +63,7 @@ In your template, the PrestaShop UI Kit must be added to your `form`.
 {% form_theme form '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
 ```
 
-Then in Javascript you have to connect `EntitySearchInput` component.
+Then, in JavaScript, you have to connect the `EntitySearchInput` component.
 
 ```js
 const elementProductId = $("#form_prefix_field_name");
