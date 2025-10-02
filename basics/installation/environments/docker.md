@@ -76,7 +76,7 @@ services:
       - prestashop_network
   prestashop:
     container_name: prestashop
-    image: prestashop/prestashop:latest # Latest stable version of the PrestaShop, to see all available images go to ...
+    image: prestashop/prestashop:latest
     restart: unless-stopped
     depends_on:
       - mysql
@@ -92,6 +92,10 @@ services:
 networks:
     prestashop_network:
 ```
+
+{{% notice note %}}
+To see all available images, read [Images, architectures and tags](/9/basics/installation/environments/docker/#images-architectures-and-tags).
+{{% /notice %}}
 
 {{% notice info %}}
 When using an M1-chip Mac, you may need to add: `platform: linux/x86_64` on each container declaration. 
