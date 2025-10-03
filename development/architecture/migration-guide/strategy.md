@@ -101,7 +101,7 @@ So the structure for a Grid action, using CQRS, is the following:
 
 So "migrating a Grid action" means to "move the legacy logic into a Handler and building a Symfony layer on top of it"
 
-## Phase 4 : Add/Edit Form pages
+## Phase 4: Add/Edit Form pages
 
 These pages are form leveraging the concepts of CQRS.
 
