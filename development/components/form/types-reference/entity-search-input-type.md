@@ -25,7 +25,7 @@ This form type is used for an OneToMany (or ManyToMany) association, it allows t
 | EntitySearchInput | Handles the search input, AJAX calls, and product selection logic. |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use them]({{<relref "/9/development/components/global-components">}})
+Learn more about [JavaScript components and how to use them]({{<relref "/9/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example
