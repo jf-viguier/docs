@@ -15,8 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: 'This form type is used to display modules in an extra tab that regroup the modules implementing the displayAdminProductsExtra hook. This is not the recommended way to integrate in the product page anymore but we keep it for backward compatibility.'
-
+description: 'This form type is used to display modules in an extra tab that regroup the modules implementing the displayAdminProductsExtra hook. This is not the recommended way to integrate in the product page anymore but we keep it for backward compatibility. See **[Extending the new product page form](/9/modules/sample-modules/extend-product-page/)**.'
 ---
 
 {{% hookDescriptor %}}
