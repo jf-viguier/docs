@@ -16,7 +16,7 @@ This form type is used for an OneToMany (or ManyToMany) association, it allows t
 | min_length | integer | 3 | Minimum number of characters required before triggering the search.
 | remote_url | string | none | Overrides the default search endpoint with a custom URL.
 | filtered_identities | array | [] | List of entity IDs that must be excluded from the search results.
-| limit | integer | 1 | The number of item to display.
+| limit | integer | 1 | The number of items to display.
 
 ## Required Javascript components
 
