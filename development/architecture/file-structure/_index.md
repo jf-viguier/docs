@@ -12,6 +12,7 @@ Here's the typical directory structure of a PrestaShop install:
 ```
 .
 ├── admin
+├── admin-api
 ├── app
 ├── bin
 ├── cache
@@ -29,13 +30,10 @@ Here's the typical directory structure of a PrestaShop install:
 ├── override
 ├── pdf
 ├── src
-├── templates
 ├── tests
-├── tests-legacy
 ├── themes
 ├── tools
 ├── translations
-├── travis-scripts
 ├── upload
 ├── var
 ├── vendor
@@ -62,6 +60,10 @@ It contains the following subdirectories:
 - `/filemanager`: sources for the Back office file manager 
 - `/import`: contains data import files
 - `/themes`: contains the templates for two back office themes, `default` and `new-theme`.
+
+### /admin-api
+
+Empty folder use for the Admin API route. To learn more about this feature, read the [Admin API section]({{< ref "/9/admin-api/" >}}). 
 
 ### /app
 
@@ -191,10 +193,6 @@ Contains all the template files (`.tpl`) related to PDF file generation (invoice
 
 Contains the new architecture files (**Core**, **Adapter** and **PrestaShop Bundle**). To learn more, see [Understanding the "src" folder]({{< relref "understanding-src-folder" >}}). 
 
-### /templates
-
-Contains Twig templates for the Symfony bundles.
-
 ### /tests
 
 Contains automated tests. This directory is not included in release packages.
@@ -204,10 +202,6 @@ Tests are split in three big families:
 - `Integration`: contains behavior and integration tests.
 - `UI`: contains end-to-end tests.
 - `Unit`: contains unit tests.
-
-### /tests-legacy
-
-Contains old automated tests currently being rewritten. This directory is not included in release packages.
 
 ### /themes
 
@@ -229,10 +223,6 @@ It contains the following subdirectories:
 ### /translations
 
 Contains translation resources for all the installed languages, including zip packages for any translation packs you have downloaded.
-
-### /travis-scripts
-
-Contains Travis-specific scripts (we use [Travis](https://travis-ci.org/) as our [CI](https://en.wikipedia.org/wiki/Continuous_integration) management system for pull requests). This directory is not included in release packages.
 
 ### /upload
 
