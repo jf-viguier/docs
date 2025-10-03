@@ -46,7 +46,7 @@ $builder
     ]);
 ```
 
-In your template the prestashop ui kit must be added to your `form`.
+In your template, the PrestaShop UI Kit must be added as your `form_theme`, from the `.twig` file or directly from the controller.
 
 ```twig
 {% form_theme form '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
