@@ -52,7 +52,7 @@ If you are outside a controller, and after careful consideration you think you a
 
 namespace PrestaShop\PrestaShop\Core\Foo\Bar;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class SomeService
 {

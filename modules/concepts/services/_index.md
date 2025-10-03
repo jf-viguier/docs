@@ -28,7 +28,7 @@ At first you will need to create a class for your service of course:
 // modules/yourmodule/src/YourService.php
 namespace YourCompany\YourModule;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class YourService {
     /** @var TranslatorInterface */
