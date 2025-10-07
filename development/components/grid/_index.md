@@ -352,8 +352,88 @@ prestashop.core.grid.product_grid_factory:
         - '@prestashop.core.grid.filter.form_factory'                            # core service needed by grid factory
         - '@prestashop.core.hook.dispatcher'                                     # core service needed by grid factory
 ```
+And we are done!
 
-And we are done! Let's see how to use it and render it in the page.
+#### Decorating your data
+
+Sometimes, you may need to decorate or modify your data in order to format it in a specific way. In this case, you can create your own decorator service.
+
+First, declare the decorator service in your YAML configuration:
+
+```yaml
+my.namespace.grid.data_provider.product_grid_data_factory_decorator:
+    class: 'My\Namespace\Grid\Data\ProductGridDataFactoryDecorator'
+    arguments:
+      - '@prestashop.core.grid.data.factory.product_data_factory' # our data factory
+```
+
+Then you have to create the corresponding class. You can alter the records in the `applyModifications` function.
+
+```php
+<?php
+
+namespace My\Namespace\Grid\Data;
+
+use PrestaShop\PrestaShop\Core\Grid\Data\GridData;
+use PrestaShop\PrestaShop\Core\Grid\Record\RecordCollection;
+use PrestaShop\PrestaShop\Core\Grid\Record\RecordCollectionInterface;
+use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteriaInterface;
+use PrestaShop\PrestaShop\Core\Grid\Data\Factory\GridDataFactoryInterface;
+
+final class ProductGridDataFactoryDecorator implements GridDataFactoryInterface
+{
+    private $productGridDataFactory;
+
+    public function __construct(
+        GridDataFactoryInterface $productGridDataFactory
+    ) {
+        $this->productGridDataFactory = $productGridDataFactory;
+    }
+
+    public function getData(SearchCriteriaInterface $searchCriteria)
+    {
+        $productData = $this->productGridDataFactory->getData($searchCriteria);
+
+        $productRecords = $this->applyModifications($productData->getRecords());
+
+        return new GridData(
+            $productRecords,
+            $productData->getRecordsTotal(),
+            $productData->getQuery()
+        );
+    }
+
+    private function applyModifications(RecordCollectionInterface $products)
+    {
+        $modifiedProducts = [];
+
+        foreach ($products as $product) {
+            # Basic example on how to alter the record
+            $product['name'] = ucfirst($product['name']);
+
+            $modifiedProducts[] = $product;
+        }
+
+        return new RecordCollection($modifiedProducts);
+    }
+}
+
+```
+
+Finally, we override the default `Grid Factory` service to use our decorated data factory instead of the original one.
+
+```yaml
+# Configure Grid factory to use services we have implemented
+prestashop.core.grid.product_grid_factory:
+    class: 'PrestaShop\PrestaShop\Core\Grid\GridFactory'
+    arguments:
+        - '@prestashop.core.grid.definition.factory.product_grid_definition_factory'
+        - '@my.namespace.grid.data_provider.product_grid_data_factory_decorator' # our decorator service
+        - '@prestashop.core.grid.filter.form_factory'
+        - '@prestashop.core.hook.dispatcher'
+```
+
+Now let's see how to use the grid and render it in the page.
 
 ### Rendering Grid
 
