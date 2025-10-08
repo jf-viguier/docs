@@ -27,7 +27,7 @@ $actionColumn = new ActionColumn('actions');
 $actionColumn->setName('Actions');
 $actionColumn->setOptions([
      'actions' => [
-        ->add((new LinkRowAction('delete'))
+        ((new LinkRowAction('delete'))
             ->setIcon('delete')
             ->setOptions([
                 'route' => 'admin_custom_route',
