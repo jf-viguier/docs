@@ -37,7 +37,6 @@ $actionColumn->setOptions([
                 'confirm_message' => 'Delete selected item?',
             ])
         )
-     ],
 ]);
 
 $columns = new ColumnCollection();
