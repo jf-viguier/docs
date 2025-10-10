@@ -78,6 +78,39 @@ class MyGridDefinitionFactory extends AbstractGridDefinitionFactory
 }
 ```
 
+### Disabling the bulk checkbox for specific rows
+
+{{% notice note %}}
+See [Decorating your data]({{< ref "/9/development/components/grid/_index.md#decorating-your-data" >}}) for more details on how to decorate a grid.
+{{% /notice %}}
+
+It's possible to disable the bulk action checkbox for specific rows in a grid. To do this, decorate the grid data and set `disableBulkCheckbox` to `true` on the record(s) that should be disabled.
+
+```php
+<?php
+# Decorated grid service
+
+final class ExampleGridDataFactoryDecorator implements GridDataFactoryInterface
+{
+    # ...
+
+    private function applyModifications(array $records): RecordCollectionInterface
+    {
+        $modifiedRecords = [];
+
+        foreach ($records as $record) {
+            if ($record['status'] === 'archived') {
+                $record['disableBulkCheckbox'] = true;
+            }
+
+            $modifiedRecords[] = $record;
+        }
+
+        return new RecordCollection($modifiedRecords);
+    }
+}
+```
+
 {{% notice note %}}
 You need to create a custom Bulk Action? We got you [covered]({{< ref "/9/development/components/grid/tutorials/work-with-bulk-actions.md#how-to-create-custom-bulk-action" >}})!
 
