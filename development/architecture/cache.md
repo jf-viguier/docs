@@ -1,5 +1,6 @@
 ---
 title: Cache
+summary: "The folder `/var/cache/<ENV>` contains all the cached files used by Symfony to improve performance. It also includes the PrestaShop class index and the Smarty cache."
 ---
 
 # Cache
