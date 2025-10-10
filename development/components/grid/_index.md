@@ -422,7 +422,7 @@ final class ProductGridDataFactoryDecorator implements GridDataFactoryInterface
 
 ```
 
-Finally, we override the default `Grid Factory` service to use our decorated data factory instead of the original one.
+Finally, override the default `GridFactory` service to use the decorated data factory instead of the original one.
 
 ```yaml
 # Configure Grid factory to use services we have implemented
