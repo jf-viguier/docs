@@ -369,7 +369,7 @@ my.namespace.grid.data_provider.product_grid_data_factory_decorator:
       - '@prestashop.core.grid.data.factory.product_data_factory' # our data factory
 ```
 
-Then you have to create the corresponding class. You can alter the records in the `applyModifications` function.
+Then, create the corresponding class. You can alter the records inside the `applyModifications()` method.
 
 ```php
 <?php
