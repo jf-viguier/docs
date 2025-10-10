@@ -356,7 +356,9 @@ And we are done!
 
 #### Decorating your data
 
-Sometimes, you may need to decorate or modify your data in order to format it in a specific way. In this case, you can create your own decorator service.
+Sometimes you may need to modify or decorate your data to format it in a specific way. In this case, you can create a custom decorator service.
+
+This is useful when you want to keep your data retrieval logic untouched and apply formatting, transformations, or additional computed fields before rendering the grid.
 
 First, declare the decorator service in your YAML configuration:
 
