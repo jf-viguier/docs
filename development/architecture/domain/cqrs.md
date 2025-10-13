@@ -57,7 +57,7 @@ We’ll assume you’re creating it inside a module, which is the recommended wa
 
 If you’re not familiar with module creation yet, see [how to create a module]({{< relref "/9/modules/creation/" >}}).
 
-First you have to declare the `CommandHandler` in your `config/services.yml` :
+First declare the `CommandHandler` in the `config/services.yml` :
 
 ```yml
 # services.yml
@@ -68,8 +68,12 @@ Your\Namespace\CommandHandler\ToggleProductStatusHandler:
   public: true
 ```
 
-Then you have to create two classes.
-* The `Command` which provides the data you will need in the `CommandHandler`.
+{{% notice note %}}
+if the handler is not found, ensure the module namespace is correctly registered in composer.json or in the class.
+{{% /notice %}}
+
+Then create two classes.
+* The `Command` which provides the data needed in the `CommandHandler`.
 * The `CommandHandler` which will process the data.
 
 Create the Command
@@ -103,8 +107,8 @@ final class ToggleProductStatusCommand
 
 Create the CommandHandler
 
-Now, you will create the `CommandHandler` which will execute it. Note that your class must have the `AsCommandHandler` attribute.
-You can also do some validation and throw exceptions if needed.
+Now, create the `CommandHandler` which will execute it. Note that the class must have the `AsCommandHandler` attribute.
+It's also possible to do some validation and throw exceptions if needed.
 
 ```php
 <?php
@@ -134,7 +138,7 @@ final class ToggleProductStatusHandler
 }
 ```
 
-To execute your command, use the `CommandBus` service. The `CommandBus` automatically finds and executes the right handler.
+To execute the command, use the `CommandBus` service. The `CommandBus` automatically finds and executes the right handler thanks to the `#[AsCommandHandler]` attribute.
 
 Here's an example from a Symfony controller.
 
@@ -148,6 +152,8 @@ public function indexAction()
     $status = false;
 
     $command = new ToggleProductStatusCommand($productId, $status);
+
+    # Retrieves a prestashop.core.command_bus service
     $commandBus = $this->getCommandBus();
 
     $commandBus->handle($command);
@@ -183,7 +189,7 @@ We’ll assume you’re creating it inside a module, which is the recommended wa
 
 If you’re not familiar with module creation yet, see [how to create a module]({{< relref "/9/modules/creation/" >}}).
 
-First you have to declare the `QueryHandler` in your `config/services.yml` :
+First declare the `QueryHandler` in the `config/services.yml` :
 
 ```yml
 # services.yml
@@ -194,8 +200,12 @@ Your\Namespace\QueryHandler\GetProductForEditingHandler:
   public: true
 ```
 
-Then you'll have to create three classes.
-* The `Query` which will be composed of the data you will need to retrieve the product
+{{% notice note %}}
+if the handler is not found, ensure the module namespace is correctly registered in composer.json or in the class.
+{{% /notice %}}
+
+Then create three classes.
+* The `Query` which will be composed of the data needed to retrieve the product
 * The `QueryHandler` which will retrieve the data
 * The `QueryResult` class which represents the retrieved data in a structured object.
 
@@ -220,7 +230,7 @@ class GetProductForEditing
 
 Create the QueryResult
 
-In this example, we'll just retrieve the product id and the name.
+This example will just retrieve the product id and its name.
 
 ```php
 <?php
@@ -249,8 +259,8 @@ class EditableProduct
 
 Create the QueryHandler
 
-Now, you will create the `QueryHandler` which will execute the `Command` and return an `EditableProduct` object. Note that your class must have the `AsQueryHandler` attribute.
-You can also do some validation and throw exceptions if needed.
+Now, create the `QueryHandler` which will execute the `Query` and return an `EditableProduct` object. Note that the class must have the `AsQueryHandler` attribute.
+It's also possible to do some validation and throw exceptions if needed.
 
 ```php
 <?php
@@ -286,7 +296,7 @@ final class GetProductForEditingHandler
 
 Execute the Query
 
-To execute your `Query`, use the `QueryBus` service. The `QueryBus` automatically finds and executes the right handler.
+To execute the `Query`, use the `QueryBus` service. The `QueryBus` automatically finds and executes the right handler thanks to the `#[AsQueryHandler]` attribute.
 
 Here's an example from a Symfony controller.
 
@@ -296,6 +306,7 @@ Here's an example from a Symfony controller.
 
 public function indexAction()
 {
+    # Retrieves a prestashop.core.query_bus service
     $queryBus = $this->getQueryBus();
 
     $query = new GetProductForEditing(1);
