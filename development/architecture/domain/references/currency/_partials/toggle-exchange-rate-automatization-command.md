@@ -1,5 +1,10 @@
 `PrestaShop\PrestaShop\Core\Domain\Currency\Command\ToggleExchangeRateAutomatizationCommand`
-_Class ToggleExchangeRateAutomatizationCommand is responsible for turning on or off the setting - if its on then in CronJobs module it creates new record with url which points to the script which is being executed at certain time of period. If the setting is off then it removes that record._
+
+{{% notice warning %}}
+**Deprecated:** This command is tied to the CronJobs module, which is being phased out and will no longer be available after December 2025. To automatically update currency exchange rates, configure a standard cron job instead. See the [Pricing FAQ]({{< relref "/faq/pricing" >}}) for details on setting up currency rate updates.
+{{% /notice %}}
+
+_Class ToggleExchangeRateAutomatizationCommand is responsible for turning on or off the automatic exchange rate update setting._
 
 | Command details            |    |
 | -------------------------- | -- |
