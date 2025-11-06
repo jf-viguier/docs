@@ -123,7 +123,7 @@ Let's continue with the next line in this block of code:
 $this->need_instance = 0;
 $this->ps_versions_compliancy = [
     'min' => '8.0.0',
-    'max' => _PS_VERSION_,
+    'max' => '9.99.99',
 ];
 $this->bootstrap = true;
 ```
@@ -131,7 +131,7 @@ $this->bootstrap = true;
 This section handles the relationship with the module and its environment (namely, PrestaShop):
 
 - The `need_instance` attribute Indicates whether to load the module's class when displaying the "Modules" page in the back office. If set at 0, the module will not be loaded, and therefore will spend less resources to generate the "Modules" page. If your module needs to display a warning message in the "Modules" page, then you must set this attribute to `1`.
-- The `ps_versions_compliancy` attribute indicates which version of PrestaShop this module is compatible with. In the example above, we are defining the compatibility range between `8.0.0 and `_PS_VERSION_` a constant representing the current version of the PrestaShop installation.
+- The `ps_versions_compliancy` attribute indicates which version of PrestaShop this module is compatible with. In the example above, we are defining the compatibility range between `8.0.0 and `9.99.99`.
 - The `bootstrap` attribute indicates that the module's template files have been built with PrestaShop's bootstrap tools in mind.
 
 Next, we call the constructor method from the parent PHP class:
