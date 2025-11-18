@@ -50,6 +50,116 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 public function handle(NameOfTheCommand $command);
 ```
 
+#### Code example
+
+In this example, we’ll create a `Command` to toggle the status of a `Product`.
+We’ll assume you’re creating it inside a module, which is the recommended way to extend PrestaShop.
+
+If you’re not familiar with module creation yet, see [how to create a module]({{< relref "/9/modules/creation/" >}}).
+
+First declare the `CommandHandler` in the `config/services.yml` :
+
+```yml
+# services.yml
+
+# Declare the CommandHandler service
+Your\Namespace\CommandHandler\ToggleProductStatusHandler:
+  autoconfigure: true
+  public: true
+```
+
+{{% notice note %}}
+if the handler is not found, ensure the module namespace is correctly registered in composer.json or in the class.
+{{% /notice %}}
+
+Then create two classes.
+* The `Command` which provides the data needed in the `CommandHandler`.
+* The `CommandHandler` which will process the data.
+
+Create the Command
+
+```php
+<?php
+
+namespace Your\Namespace\Command;
+
+/**
+ * Toggles the active status of a Product.
+ */
+final class ToggleProductStatusCommand
+{
+    public function __construct(
+        private readonly int $productId,
+        private readonly bool $status
+    ) {}
+
+    public function getProductId(): int
+    {
+        return $this->productId;
+    }
+
+    public function getStatus(): bool
+    {
+        return $this->status;
+    }
+}
+```
+
+Create the CommandHandler
+
+Now, create the `CommandHandler` which will execute it. Note that the class must have the `AsCommandHandler` attribute.
+It's also possible to do some validation and throw exceptions if needed.
+
+```php
+<?php
+
+namespace Your\Namespace\CommandHandler;
+
+use PrestaShop\PrestaShop\Core\CommandBus\Attributes\AsCommandHandler;
+use Your\Namespace\Command\ToggleProductStatusCommand;
+use PrestaShopException;
+use Product;
+use Validate;
+
+#[AsCommandHandler]
+final class ToggleProductStatusHandler
+{
+    public function handle(ToggleProductStatusCommand $command): void
+    {
+        $product = new Product($command->getProductId());
+
+        if (!Validate::isLoadedObject($product)) {
+            throw new PrestaShopException(sprintf('Product with id %d not found.', $command->getProductId()));
+        }
+
+        $product->active = $command->getStatus();
+        $product->save();
+    }
+}
+```
+
+To execute the command, use the `CommandBus` service. The `CommandBus` automatically finds and executes the right handler thanks to the `#[AsCommandHandler]` attribute.
+
+Here's an example from a Symfony controller.
+
+```php
+<?php
+# Your controller
+
+public function indexAction()
+{
+    $productId = 1;
+    $status = false;
+
+    $command = new ToggleProductStatusCommand($productId, $status);
+
+    # Retrieves a prestashop.core.command_bus service
+    $commandBus = $this->getCommandBus();
+
+    $commandBus->handle($command);
+}
+```
+
 ### Query and QueryHandler principles
 
 1. Data retrieval SHOULD always go through a `Query`.
@@ -70,6 +180,140 @@ public function handle(NameOfTheCommand $command);
  * @return TypeOfReturn
  */
 public function handle(NameOfTheQuery $query): TypeOfReturn;
+```
+
+#### Code example
+
+In this example, we’ll create a `Query` to retrieve some information of a `Product`.
+We’ll assume you’re creating it inside a module, which is the recommended way to extend PrestaShop.
+
+If you’re not familiar with module creation yet, see [how to create a module]({{< relref "/9/modules/creation/" >}}).
+
+First declare the `QueryHandler` in the `config/services.yml` :
+
+```yml
+# services.yml
+
+# Declare the QueryHandler service
+Your\Namespace\QueryHandler\GetProductForEditingHandler:
+  autoconfigure: true
+  public: true
+```
+
+{{% notice note %}}
+if the handler is not found, ensure the module namespace is correctly registered in composer.json or in the class.
+{{% /notice %}}
+
+Then create three classes.
+* The `Query` which will be composed of the data needed to retrieve the product
+* The `QueryHandler` which will retrieve the data
+* The `QueryResult` class which represents the retrieved data in a structured object.
+
+Create the Query
+
+```php
+<?php
+
+namespace Your\Namespace\Query;
+
+class GetProductForEditing
+{
+    public function __construct(private readonly int $productId) {}
+
+    public function getProductId(): int
+    {
+        return $this->productId;
+    }
+}
+
+```
+
+Create the QueryResult
+
+This example will just retrieve the product id and its name.
+
+```php
+<?php
+
+namespace Your\Namespace\QueryResult;
+
+class EditableProduct
+{
+    public function __construct(
+        private readonly int $productId,
+        private readonly array $name
+    ) {}
+
+    public function getProductId(): int
+    {
+        return $this->productId;
+    }
+
+    public function getName(): array
+    {
+        return $this->name;
+    }
+}
+
+```
+
+Create the QueryHandler
+
+Now, create the `QueryHandler` which will execute the `Query` and return an `EditableProduct` object. Note that the class must have the `AsQueryHandler` attribute.
+It's also possible to do some validation and throw exceptions if needed.
+
+```php
+<?php
+
+namespace Your\Namespace\QueryHandler;
+
+use Your\Namespace\QueryResult\EditableProduct;
+use Your\Namespace\Query\GetProductForEditing;
+use PrestaShop\PrestaShop\Core\CommandBus\Attributes\AsQueryHandler;
+use PrestaShopException;
+use Product;
+use Validate;
+
+#[AsQueryHandler]
+final class GetProductForEditingHandler
+{
+    public function handle(GetProductForEditing $query): EditableProduct
+    {
+        $product = new Product($query->getProductId());
+
+        if (!Validate::isLoadedObject($product)) {
+            throw new PrestaShopException(sprintf('Product with id %d not found.', $query->getProductId()));
+        }
+
+        // Return an EditableProduct object containing the requested information
+        return new EditableProduct(
+            $product->id,
+            $product->name
+        );
+    }
+}
+```
+
+Execute the Query
+
+To execute the `Query`, use the `QueryBus` service. The `QueryBus` automatically finds and executes the right handler thanks to the `#[AsQueryHandler]` attribute.
+
+Here's an example from a Symfony controller.
+
+```php
+<?php
+# Your controller
+
+public function indexAction()
+{
+    # Retrieves a prestashop.core.query_bus service
+    $queryBus = $this->getQueryBus();
+
+    $query = new GetProductForEditing(1);
+
+    /** @var EditableProduct $editableProduct */
+    $editableProduct = $queryBus->handle($query);
+}
 ```
 
 ## Command and Query buses
