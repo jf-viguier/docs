@@ -19,7 +19,7 @@ To run a local DevDocs install on your system, you will need:
 
 ## Installation
 
-[Follow this guide][1] to install a local DevDocs.
+[Follow this guide](https://github.com/PrestaShop/devdocs-site/) to install a local DevDocs.
 
 ## Submitting your changes
 
@@ -28,5 +28,3 @@ We recommend following the [GitHub workflow](https://guides.github.com/introduct
 This also involves **working on your own fork** ([learn how](https://help.github.com/articles/fork-a-repo/)) before submitting a Pull Request. 
 
 To fork this project on GitHub, head to the [project's repository]({{% siteparam ghRepoURL %}}), then click on the "Fork" button on the top right corner of the screen.
-
-[1]: {{% siteparam ghRepoURL %}}blob/master/README.md#rendering-the-site-locally
