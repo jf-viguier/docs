@@ -22,11 +22,12 @@ For more info about possible actions see [Actions reference][actions-reference].
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\LinkRowAction;
+use PrestaShop\PrestaShop\Core\Grid\Action\Row\RowActionCollection;
 
 $actionColumn = new ActionColumn('actions');
 $actionColumn->setName('Actions');
 $actionColumn->setOptions([
-     'actions' => [
+     'actions' => (new RowActionCollection())
         ->add((new LinkRowAction('delete'))
             ->setIcon('delete')
             ->setOptions([
@@ -36,7 +37,6 @@ $actionColumn->setOptions([
                 'confirm_message' => 'Delete selected item?',
             ])
         )
-     ],
 ]);
 
 $columns = new ColumnCollection();
