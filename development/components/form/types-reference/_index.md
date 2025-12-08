@@ -29,6 +29,7 @@ Developers can already use a large list of field types (see [Symfony types](http
 | [`EntitySearchInputType`](entity-search-input-type) | PrestaShopBundle\Form\Admin\Type | This form type is used for a OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote url) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated items. |
 | [`FormattedTextareaType`](formatted-textarea) | PrestaShopBundle\Form\Admin\Type | Class enabling TinyMCE on a Textarea field |
 | [`GeneratableTextType`](generatable-text) | PrestaShopBundle\Form\Admin\Type | It is extension of TextType that adds additonal button which allows generating value for input |
+| [`GeoCoordinatesType`](geo-coordinates) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a geolocation latitude/longitude coordinates field. |
 | [`IconButtonType`](icon-button-type) | PrestaShopBundle\Form\Admin\Type | A form button with material icon. |
 | [`ImagePreviewType`](image-preview-type) | PrestaShopBundle\Form\Admin\Type | This form type is used to display an image value without providing an interactive input to edit it. It is based on a hidden input so it could be changed programmatically, or be used just to display an image in a form. |
 | [`IntegerMinMaxFilterType`](integer-min-max-filter) | PrestaShopBundle\Form\Admin\Type | Defines the integer type two inputs of min and max value - designed to fit grid in grid filter. |
