@@ -19,7 +19,7 @@ To run a local DevDocs install on your system, you will need:
 
 ## Installation
 
-[Follow this guide](https://github.com/PrestaShop/devdocs-site/) to install a local DevDocs.
+[Follow this guide](https://github.com/PrestaShop/devdocs-site/) to install Developer Documentation locally.
 
 ## Submitting your changes
 
