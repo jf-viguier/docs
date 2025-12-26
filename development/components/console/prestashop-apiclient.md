@@ -32,7 +32,7 @@ Create an AminApi client.
 bin/console prestashop:api-client create DevDocs
 ```
 
-Create an AminApi client with custom description.
+Create an AdminApi client with custom description.
 
 ```bash
 bin/console prestashop:api-client create DevDocs --description="Made by DevDocs"
