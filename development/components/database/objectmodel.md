@@ -542,7 +542,7 @@ $cmsIdsToDelete = [1, 2, 3, 8, 10];
 Thanks to the hooks, you can alter the Object Model or execute functions during the lifecycle of your models. Every hook receive an instance of the manipulated object model:
 
 <div class="mermaid">
-graph TD
+graph BT
    subgraph "DELETE"
         deleteA(actionObject<strong>DeleteBefore</strong>) --> deleteB(actionObject<i>Classname</i><strong>DeleteBefore</strong>) --> deleteC(actionObject<strong>DeleteAfter</strong>) --> deleteD(actionObject<i>Classname</i><strong>DeleteAfter</strong>)
     end
