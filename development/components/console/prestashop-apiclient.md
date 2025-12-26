@@ -26,26 +26,26 @@ Manage Admin API client.
 
 ## Usage
 
-Create an AminApi client.
+Create an AdminApi client.
 
 ```bash
 bin/console prestashop:api-client create DevDocs
 ```
 
-Create an AminApi client with custom description.
+Create an AdminApi client with custom description.
 
 ```bash
 bin/console prestashop:api-client create DevDocs --description="Made by DevDocs"
 ```
 ```
 
-Create an AminApi client and display only secret.
+Create an AdminApi client and display only secret.
 
 ```bash
 bin/console prestashop:api-client create DevDocs --secret-only
 ```
 
-Delete an AminApi client.
+Delete an AdminApi client.
 
 ```bash
 bin/console prestashop:api-client delete DevDocs
